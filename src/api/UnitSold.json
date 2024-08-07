@@ -1,0 +1,32 @@
+[
+  {
+    "id": "01",
+    "Name": "Men Grey Hoodie",
+    "Price": "49.90",
+    "Unitsold": "204"
+  },
+  {
+    "id": "02",
+    "Name": "Women Striped T-Shirt",
+    "Price": "34.90",
+    "Unitsold": "155"
+  },
+  {
+    "id": "03",
+    "Name": "Wome White T-Shirt",
+    "Price": "40.90",
+    "Unitsold": "120"
+  },
+  {
+    "id": "04",
+    "Name": "Men White T-Shirt",
+    "Price": "49.90",
+    "Unitsold": "204"
+  },
+  {
+    "id": "05",
+    "Name": "Women Red T-Shirt",
+    "Price": "34.90",
+    "Unitsold": "155"
+  }
+]
