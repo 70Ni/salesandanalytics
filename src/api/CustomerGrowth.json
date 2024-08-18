@@ -1,0 +1,62 @@
+[
+  {
+    "month": "Jan",
+    "returning": 450,
+    "new": 320
+  },
+  {
+    "month": "Feb",
+    "returning": 380,
+    "new": 270
+  },
+  {
+    "month": "Mar",
+    "returning": 330,
+    "new": 180
+  },
+  {
+    "month": "Apr",
+    "returning": 410,
+    "new": 270
+  },
+  {
+    "month": "May",
+    "returning": 470,
+    "new": 200
+  },
+  {
+    "month": "Jun",
+    "returning": 380,
+    "new": 250
+  },
+  {
+    "month": "Jul",
+    "returning": 405,
+    "new": 200
+  },
+  {
+    "month": "Aug",
+    "returning": 430,
+    "new": 150
+  },
+  {
+    "month": "Sep",
+    "returning": 450,
+    "new": 295
+  },
+  {
+    "month": "Oct",
+    "returning": 400,
+    "new": 287
+  },
+  {
+    "month": "Nov",
+    "returning": 430,
+    "new": 170
+  },
+  {
+    "month": "Dec",
+    "returning": 415,
+    "new": 110
+  }
+]
