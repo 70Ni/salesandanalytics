@@ -1,0 +1,62 @@
+[
+  {
+    "image": "HomeIcon",
+    "item": "Dashboard",
+    "link": "/dashboard"
+  },
+  {
+    "image": "OrderIcon",
+    "item": "Orders",
+    "link": "/orders"
+  },
+  {
+    "image": "ProductIcon",
+    "item": "Products",
+    "link": "/products"
+  },
+  {
+    "image": "FileIcon",
+    "item": "Categories",
+    "link": "/categories"
+  },
+  {
+    "image": "CustomersIcon",
+    "item": "Customers",
+    "link": "/customers"
+  },
+  {
+    "image": "CustomersIcon",
+    "item": "Reports",
+    "link": "/reports"
+  },
+  {
+    "image": "CouponIcon",
+    "item": "Coupons",
+    "link": "/coupons"
+  },
+  {
+    "image": "InboxIcon",
+    "item": "Inbox",
+    "link": "/inbox"
+  },
+  {
+    "image": "KnowledgeIcon",
+    "item": "Knowledge Base",
+    "link": "/knowledge-base"
+  },
+  {
+    "image": "UpdateIcon",
+    "item": "Product Updates",
+    "link": "/product-updates"
+  },
+  {
+    "image": "ProfileIcon",
+    "item": "Person Settings",
+    "link": "/personal-settings"
+  },
+  {
+    "image": "SettingsIcon",
+    "item": "Global Settings",
+    "link": "/global settings"
+  }
+]

@@ -1,0 +1,135 @@
+{
+  "Heading1": [
+    "80px",
+    {
+      "lineHeight": "112px",
+      "fontWeight": "700"
+    }
+  ],
+  "Heading2": [
+    "64px",
+    {
+      "lineHeight": "90px",
+      "fontWeight": "700"
+    }
+  ],
+  "Heading3": [
+    "48px",
+    {
+      "lineHeight": "66px",
+      "fontWeight": "700"
+    }
+  ],
+  "Heading4": [
+    "32px",
+    {
+      "lineHeight": "44px",
+      "fontWeight": "700"
+    }
+  ],
+  "Heading5": [
+    "24px",
+    {
+      "lineHeight": "36px",
+      "fontWeight": "700"
+    }
+  ],
+  "Heading6": [
+    "20px",
+    {
+      "lineHeight": "28px",
+      "fontWeight": "700"
+    }
+  ],
+  "Subtitle1": [
+    "20px",
+    {
+      "lineHeight": "28px",
+      "fontWeight": "400"
+    }
+  ],
+  "Subtitle2": [
+    "24px",
+    {
+      "lineHeight": "34px",
+      "fontWeight": "400"
+    }
+  ],
+  "para": [
+    "16px",
+    {
+      "lineHeight": "24px",
+      "fontWeight": "400"
+    }
+  ],
+  "paraMedium": [
+    "16px",
+    {
+      "lineHeight": "24px",
+      "fontWeight": "500"
+    }
+  ],
+  "paraBold": [
+    "16px",
+    {
+      "lineHeight": "24px",
+      "fontWeight": "700"
+    }
+  ],
+  "text2reg": [
+    "14px",
+    {
+      "lineHeight": "20px",
+      "fontWeight": "400"
+    }
+  ],
+  "text2med": [
+    "14px",
+    {
+      "lineHeight": "20px",
+      "fontWeight": "500"
+    }
+  ],
+  "text2Bold": [
+    "14px",
+    {
+      "lineHeight": "20px",
+      "fontWeight": "700"
+    }
+  ],
+  "text3reg": [
+    "12px",
+    {
+      "lineHeight": "16px",
+      "fontWeight": "400"
+    }
+  ],
+  "text3med": [
+    "12px",
+    {
+      "lineHeight": "16px",
+      "fontWeight": "500"
+    }
+  ],
+  "text3Bold": [
+    "12px",
+    {
+      "lineHeight": "16px",
+      "fontWeight": "700"
+    }
+  ],
+  "caption1": [
+    "14px",
+    {
+      "lineHeight": "20px",
+      "fontWeight": "700"
+    }
+  ],
+  "caption2": [
+    "16px",
+    {
+      "lineHeight": "24px",
+      "fontWeight": "700"
+    }
+  ]
+}

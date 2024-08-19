@@ -1,0 +1,255 @@
+[
+  {
+    "coupon-name": "Summer discount 10% off",
+    "code": "Summer2020",
+    "used": 15,
+    "status": "Active",
+    "starting": "May 5, 2020",
+    "end": "May 15, 2020",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "Free shipping on all items",
+    "code": "Shipfreetomee15",
+    "used": 42,
+    "status": "Active",
+    "starting": "May 5, 2020",
+    "end": "May 15, 2020",
+    "category": "shipping"
+  },
+  {
+    "coupon-name": "Discount for women clothes 5%",
+    "code": "Womenclothing5",
+    "used": 12,
+    "status": "Active",
+    "starting": "April 12, 2020",
+    "end": "April 20, 2020",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "Summer discount 10% off",
+    "code": "Summer2020",
+    "used": 15,
+    "status": "Active",
+    "starting": "May 5, 2020",
+    "end": "May 15, 2020",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "Free shipping on all items",
+    "code": "Shipfreetomee15",
+    "used": 42,
+    "status": "Active",
+    "starting": "May 5, 2020",
+    "end": "May 15, 2020",
+    "category": "shipping"
+  },
+  {
+    "coupon-name": "Discount for women clothes 5%",
+    "code": "Womenclothing5",
+    "used": 12,
+    "status": "Active",
+    "starting": "April 12, 2020",
+    "end": "April 20, 2020",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "Summer discount 10% off",
+    "code": "Summer2020",
+    "used": 15,
+    "status": "Active",
+    "starting": "May 5, 2020",
+    "end": "May 15, 2020",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "Free shipping on all items",
+    "code": "Shipfreetomee15",
+    "used": 42,
+    "status": "Expired",
+    "starting": "May 5, 2020",
+    "end": "May 15, 2020",
+    "category": "shipping"
+  },
+  {
+    "coupon-name": "Discount for women clothes 5%",
+    "code": "Womenclothing5",
+    "used": 12,
+    "status": "Expired",
+    "starting": "April 12, 2020",
+    "end": "April 20, 2020",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "Summer discount 10% off",
+    "code": "Summer2020",
+    "used": 15,
+    "status": "Expired",
+    "starting": "May 5, 2020",
+    "end": "May 15, 2020",
+    "category": "Discount"
+  },
+
+  {
+    "coupon-name": "Winter Warmth 20%",
+    "code": "Winter2023",
+    "used": 8,
+    "status": "Expired",
+    "starting": "December 15, 2022",
+    "end": "January 15, 2023",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "Spring Refresh 15%",
+    "code": "Spring2023",
+    "used": 12,
+    "status": "Expired",
+    "starting": "March 1, 2023",
+    "end": "April 15, 2023",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "Summer Savings 25%",
+    "code": "Summer2023",
+    "used": 18,
+    "status": "Expired",
+    "starting": "June 15, 2023",
+    "end": "August 15, 2023",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "Autumn Abundance 10%",
+    "code": "Autumn2023",
+    "used": 10,
+    "status": "Expired",
+    "starting": "September 15, 2023",
+    "end": "November 15, 2023",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "Black Friday Bonanza 30%",
+    "code": "BlackFriday2023",
+    "used": 50,
+    "status": "Expired",
+    "starting": "November 23, 2023",
+    "end": "November 27, 2023",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "Cyber Monday Madness 25%",
+    "code": "CyberMonday2023",
+    "used": 45,
+    "status": "Expired",
+    "starting": "November 28, 2023",
+    "end": "December 2, 2023",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "New Year New You 15%",
+    "code": "NewYear2024",
+    "used": 12,
+    "status": "Expired",
+    "starting": "January 1, 2024",
+    "end": "January 31, 2024",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "Valentine's Day Vow 20%",
+    "code": "Valentines2024",
+    "used": 15,
+    "status": "Expired",
+    "starting": "February 1, 2024",
+    "end": "February 14, 2024",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "St. Patrick's Day Luck 10%",
+    "code": "StPatricks2024",
+    "used": 8,
+    "status": "Expired",
+    "starting": "March 1, 2024",
+    "end": "March 17, 2024",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "Easter Eggstravaganza 25%",
+    "code": "Easter2024",
+    "used": 20,
+    "status": "Expired",
+    "starting": "April 1, 2024",
+    "end": "April 21, 2024",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "Mother's Day Magic 15%",
+    "code": "MothersDay2024",
+    "used": 18,
+    "status": "Expired",
+    "starting": "May 1, 2024",
+    "end": "May 12, 2024",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "Father's Day Fun 20%",
+    "code": "FathersDay2024",
+    "used": 15,
+    "status": "Expired",
+    "starting": "June 1, 2024",
+    "end": "June 16, 2024",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "Summer Splash 25%",
+    "code": "Summer2024",
+    "used": 22,
+    "status": "Active",
+    "starting": "June 15, 2024",
+    "end": "August 15, 2024",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "Back to School Boost 10%",
+    "code": "BackToSchool2024",
+    "used": 12,
+    "status": "Expired",
+    "starting": "August 15, 2024",
+    "end": "September 15, 2024",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "Labor Day Lift 15%",
+    "code": "LaborDay2024",
+    "used": 10,
+    "status": "Expired",
+    "starting": "September 1, 2024",
+    "end": "September 3, 2024",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "Autumn Adventures 20%",
+    "code": "Autumn2024",
+    "used": 8,
+    "status": "Active",
+    "starting": "September 15, 2024",
+    "end": "November 15, 2024",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "Halloween Howl 10%",
+    "code": "Halloween2024",
+    "used": 5,
+    "status": "Upcoming",
+    "starting": "October 25, 2024",
+    "end": "November 1, 2024",
+    "category": "Discount"
+  },
+  {
+    "coupon-name": "Thanksgiving Treat 15%",
+    "code": "Thanksgiving2024",
+    "used": 0,
+    "status": "Upcoming",
+    "starting": "November 21, 2024",
+    "end": "November 29, 2024",
+    "category": "Discount"
+  }
+]

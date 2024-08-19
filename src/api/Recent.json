@@ -4,34 +4,34 @@
     "Name": "Jessica S",
     "Date": "24.05.2020",
     "Amount": "$124.97",
-    "status": "Paid"
+    "Status": "Paid"
   },
   {
     "id": "02",
     "Name": "Andrew S",
     "Date": "23.05.2020",
     "Amount": "$55.42",
-    "status": "Pending"
+    "Status": "Pending"
   },
   {
     "id": "03",
     "Name": "Kevin S",
     "Date": "23.05.2020",
     "Amount": "$89.90",
-    "status": "Paid"
+    "Status": "Paid"
   },
   {
     "id": "04",
     "Name": "Jack S",
     "Date": "22.05.2020",
     "Amount": "$144.94",
-    "status": "Pending"
+    "Status": "Pending"
   },
   {
     "id": "05",
     "Name": "Arthur S",
     "Date": "22.05.2020",
     "Amount": "$70.52",
-    "status": "Paid"
+    "Status": "Paid"
   }
 ]

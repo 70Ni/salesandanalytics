@@ -10,7 +10,6 @@ import CategorySection from "./Components/CategorySection";
 
 function Categories() {
   const addButton = <AddIcon color={"#1E5EFF"} />;
-
   return (
     <div className=" outer-container w-full mx-10">
       <div className="Header-functions-wrapper">

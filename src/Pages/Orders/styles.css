@@ -1,0 +1,11 @@
+@media only screen and (max-width: 908px) {
+  .priceOrders {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 785px) {
+    .orderStatus .order-statusOrders {
+      display: none;
+    }
+  }
