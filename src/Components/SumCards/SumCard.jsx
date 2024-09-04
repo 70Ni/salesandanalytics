@@ -8,7 +8,7 @@ const pos = "text-green-100";
 
 function SumCard({ data }) {
   return (
-    <div className="SumCard text-start flex items-center justify-between py-4 lg:py-7 px-7 w-full h-full ">
+    <div className="SumCard text-start flex items-center justify-between py-compact lg:py-7 px-7 w-full h-full ">
       <div className="left mr-6 xl:mr-12">
         <div className="text-Heading6 text-general-100">{data.rate}</div>
         <div className="text-text2reg text-general-80">{data.type}</div>

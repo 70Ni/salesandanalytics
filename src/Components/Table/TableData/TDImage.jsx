@@ -9,7 +9,7 @@ function TDImage({ ItemName, Name, subTxt, ProductImg, category }) {
       {ProductImg ? <ProductImage ProductImg={ProductImg} /> : null}
       {category ? <CouponImg category={category} /> : null}
       {Name ? <Avatar Name={Name} /> : null}
-      <div className="wrapper">
+      <div className="wrapper ml-4">
         <div className="text-text2med text-general-100">{ItemName}</div>
         <div className="text-text2reg text-general-80">{subTxt}</div>
       </div>

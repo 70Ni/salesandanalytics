@@ -6,14 +6,27 @@ const shippingBG = "bg-primary-90";
 const couponBG = "bg-general-70";
 
 function CouponImg({ category }) {
+  console.log(category);
   return (
-      <div
-        className={` ${
-          category == "Discount" ? couponBG : shippingBG
-        }  w-12 h-12 flex items-center justify-center rounded mr-4`}
-      >
-        <img src={category === "Discount" ? truck : coupon} alt="" className="z-10" />
-      </div>
+    <>
+      {category === "Discount" ? (
+        <div className="h-12 w-12">
+          <div
+            className={` ${couponBG}  w-12 h-12 flex items-center justify-center rounded mr-4`}
+          >
+            <img src={coupon} alt="" className="z-0" />
+          </div>
+        </div>
+      ) : (
+        <div className="h-12 w-12">
+          <div
+            className={` ${shippingBG}  w-12 h-12 flex items-center justify-center rounded mr-4`}
+          >
+            <img src={truck} alt="" className="z-0" />
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 

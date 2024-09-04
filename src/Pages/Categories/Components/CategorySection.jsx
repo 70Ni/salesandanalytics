@@ -1,9 +1,10 @@
 import React from "react";
 import Input from "../../../Components/Input/Medium/Input";
+import FileInput from "../../../Components/FileInput/FileInput";
 
 function CategorySection() {
   return (
-    <div className="Category-Card border p-7 border-general-50 rounded-md w-full">
+    <div className="Category-Card card">
       <div className="header text-paraBold text-general-100 mb-6 text-left">
         Categories Info
       </div>
@@ -15,8 +16,7 @@ function CategorySection() {
           Name="product"
         />
       </div>
-      ///image section
-      ///Save section
+      <FileInput />
     </div>
   );
 }

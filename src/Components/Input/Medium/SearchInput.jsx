@@ -16,7 +16,7 @@ function SearchInput({ title, placeholder, id, name }) {
         className="
       px-4 py-2 
       pl-12
-      border-2 
+      border
       border-general-50
       text-general-100
       rounded

@@ -18,6 +18,8 @@ import NavBlocker from "../../Components/NavFlat/NavBlocker";
 import SectionNav from "../../Components/Navigation/SectionNav/SectionNav";
 import ProfileLayout from "./SettingsLayouts/ProfileLayout";
 import getNav from "../../utils/SectionNav";
+import AccountSection from "./SettingsLayouts/AccountSection";
+import SecuritySection from "./SettingsLayouts/SecuritySection";
 
 const HeaderData = [
   { header: "Settings" },
@@ -44,9 +46,8 @@ function SettingsPage() {
 
   const getNavSection = (e) => {
     console.log(e);
-    if(e){
+    if (e) {
       return setSection(e);
-
     }
   };
   console.log(Section);
@@ -58,8 +59,10 @@ function SettingsPage() {
         <div className="Main-section border bg-white border-general-50 rounded-md p-7 w-full">
           <SectionNav Sections={Sections} action={getNavSection} />
           <div className="section-viewer">
-            {Section == "Profile" && <ProfileLayout />}
-            {Section == "Notification" && <NotificationSection />}
+            {Section === "Profile" && <ProfileLayout />}
+            {Section === "Notification" && <NotificationSection />}
+            {Section === "Account" && <AccountSection />}
+            {Section === "Security" && <SecuritySection />}
           </div>
 
           {/* Notification section from below */}

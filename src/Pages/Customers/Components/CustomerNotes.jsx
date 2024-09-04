@@ -5,7 +5,7 @@ import TextInput from "../../../Components/Input/Large/TextInput";
 
 function CustomerNotes() {
   return (
-    <div className="customer-information-section">
+    <div className="customer-information-section mt-7">
       <div className="header text-paraBold text-general-100 text-left">
         Customer Notes
       </div>

@@ -1,11 +1,19 @@
 import React from "react";
 import Input from "../../../Components/Input/Medium/Input";
 
-function InputFlex({ title }) {
+
+
+function InputFlex({ title, placeholder }) {
   return (
-    <div className="flex items-center gap-6">
-      <Input title={title[0]} />
-      <Input title={title[1]} />
+    <div className="flexbt gap-6">
+      <Input
+        title={title[0]}
+        placeholder={placeholder ? placeholder[0] : null}
+      />
+      <Input
+        title={title[1]}
+        placeholder={placeholder ? placeholder[0] : null}
+      />
     </div>
   );
 }

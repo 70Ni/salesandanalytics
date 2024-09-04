@@ -6,19 +6,23 @@ import { activate } from "firebase/remote-config";
 import { Link, useLocation } from "react-router-dom";
 import "./style.css";
 
+// 0F0F34
 const generalColor = "text-general-80";
 const ActivebgColor = "bg-primary-90";
 const bgColor = "bg-general-30";
 const iconActive = "#fff";
 const iconPassive = "#5A607F";
 const activeColor = "text-white";
+const hover = "hover:bg-general-40";
 
 function Navigation({ item, link, icon, open }) {
   let Icon = icon;
-  const [Active, setActive] = useState("/dashboard");
+  const location = useLocation();
+  const [Active, setActive] = useState("");
 
   const setLinkActive = (location) => {
-    setActive(location.pathname);
+    // console.log(location);
+    return setActive(location.pathname);
   };
 
   useEffect(() => {
@@ -27,28 +31,29 @@ function Navigation({ item, link, icon, open }) {
       setLinkActive(location);
     };
   }, [Active]);
+  // console.log(Active, "from State =========================");
+  // console.log(location.pathname);
 
-  const location = useLocation();
   // console.log(Active, location.pathname);
 
   return (
-    <Link to={link} onClick={() => setLinkActive(location.pathname)}>
+    <Link to={link}>
       <div
         key={location.key}
         className={`NavItem p-3 py-[10px] flex items-center justify-between ${
-          Active === location.pathname && ActivebgColor
-        } rounded cursor-pointer hover:bg-general-40`}
+          link === location.pathname && ActivebgColor
+        } rounded cursor-pointer ${link !== location.pathname ? hover : ""} `}
       >
-        <div className="left flex items-center">
+        <div className="left flex  items-center">
           {/* <img src={icon} alt="icon" /> */}
           {/* <icon /> */}
-          <Icon
-            color={Active === location.pathname ? iconActive : iconPassive}
-          />
+          <Icon color={link === location.pathname ? iconActive : iconPassive} />
           {open ? (
             <div
-              className={`item-Name text-text2med whitespace-nowrap ${
-                Active === location.pathname ? activeColor : generalColor
+              className={`item-Name ${
+                open ? "visible" : "invisible"
+              } text-text2med whitespace-nowrap ${
+                link === location.pathname ? "text-white" : "text-general-80"
               } mx-4`}
             >
               {item}

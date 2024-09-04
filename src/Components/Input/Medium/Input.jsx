@@ -3,7 +3,7 @@ import React from "react";
 function Input({ title, placeholder, id, name }) {
   return (
     <div className="flex flex-col items-start w-full min-w-[158px]">
-      <label className="text-general-80 mb-1 text-text2reg" for="fname">
+      <label className="para mb-1" for="fname">
         {title}
       </label>
       <input

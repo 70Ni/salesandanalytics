@@ -3,13 +3,84 @@
 @tailwind utilities;
 
 @layer base {
- 
 }
+
 :root {
   --primary-color: #fff;
   --secondary-color: #000;
+  --color-text-base: #fff;
+  --color-text-muted: #b600bf;
+  /* padding */
+  --primary-padding: 28px;
+  --second-padding: 20px;
+  /* Avatarsizes */
+  --Icon-size-sm: 20px;
+
 }
 
+.swiss {
+  --primary-color: #fff;
+  --secondary-color: #000;
+  --color-text-base: #fff;
+  --color-text-muted: #589bff;
+}
+
+.compact {
+  --primary-padding: 16px;
+  --second-padding: 16px;
+}
+
+@media screen and (max-width: 776px) {
+  .outer-container {
+    margin: 0px 16px;
+  }
+  .outer-container {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .Graph-wrapper-dashboard {
+    flex-direction: column;
+  }
+  .det-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 1160px) {
+  .ordersOverTime {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .Graph-details-dashboard {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .order-section {
+    margin-top: 14px;
+  }
+  .order-section:nth-child() {
+    margin-left: 18px;
+  }
+}
+
+@media screen and (max-width: 506px) {
+  .Page-Section {
+    gap: 16px;
+  }
+  .horizonal-gap {
+    gap: 16px;
+  }
+  .card {
+    padding: 20px;
+  }
+  .Header-functions-wrapper {
+    margin: 14px 0px;
+  }
+}
+/* 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -22,4 +93,62 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+} */
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+@layer components {
+  /* //fonts */
+  .subHeader {
+    @apply text-Heading6 text-general-100 font-Inter;
+  }
+  .subHeader2 {
+    @apply text-paraBold text-general-100 font-Inter;
+  }
+
+  /* Paragraphs are 14px Font size */
+  .para {
+    @apply text-text2reg text-general-80 font-Inter;
+  }
+  .paraMed {
+    @apply text-text2med text-general-100 font-Inter;
+  }
+  .paraBold {
+    @apply text-text2Bold text-general-100 font-Inter;
+  }
+  /* //cards */
+  .card {
+    @apply border  border-general-40  rounded-md p-base bg-white w-full;
+  }
+  .containerlg {
+    @apply w-full mx-10;
+  }
+  .containercompact {
+    @apply w-full mx-4;
+  }
+  .border {
+    @apply border-b border-general-40 w-full;
+  }
+  /* flexlayouts */
+  .gap30 {
+    @apply gap-[30px];
+  }
+  .gap16 {
+    @apply gap-[16px];
+  }
+  .flexbt {
+    @apply flex items-center justify-between;
+  }
+  .flexbtwr {
+    @apply flex items-center flex-wrap justify-between;
+  }
 }

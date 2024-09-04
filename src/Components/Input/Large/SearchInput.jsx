@@ -7,7 +7,7 @@ function SearchInput({ title, placeholder, id, name }) {
       <label className="text-general-80 mb-1 text-text2reg" for="fname">
         {title}
       </label>
-      <img src={searchIcon} alt={name} className="absolute top-[42px] left-4" />
+      <img src={searchIcon} alt={name} className="absolute top-[18px] left-4" />
       <input
         type="text"
         id={id}
@@ -16,7 +16,7 @@ function SearchInput({ title, placeholder, id, name }) {
         className="
       px-4 py-3 
       pl-12
-      border-2 
+      border
       border-general-50
       text-general-100
       rounded

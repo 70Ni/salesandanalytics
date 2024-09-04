@@ -7,24 +7,41 @@ import WhiteButton from "../../Components/Buttons/WhiteButton";
 import AddIcon from "../../Images/IconComponents/AddIcon";
 import VisibiltySection from "./Components/VisibiltySection";
 import CategorySection from "./Components/CategorySection";
+import HeaderSection from "../../Components/Header-Section/HeaderSection";
+import NavBlocker from "../../Components/NavFlat/NavBlocker";
 
 function Categories() {
+  const HeaderData = [
+    { header: "Products" },
+    { backlink: "/categories" },
+    {
+      buttons: [
+        {
+          primary: false,
+          buttonText: "Cancel",
+          // icon: <Settings color={"#1E5EFF"} />,
+        },
+        {
+          primary: true,
+          buttonText: "Save",
+          // icon: <AddIcon color={"#ffffff"} />,
+          // action: {
+          //   type: "Navigation",
+          //   link: "/customers",
+          // },
+        },
+      ],
+    },
+  ];
   const addButton = <AddIcon color={"#1E5EFF"} />;
   return (
-    <div className=" outer-container w-full mx-10">
-      <div className="Header-functions-wrapper">
-        <div className="Header-section text-Heading5 text-general-100">
-          Add Product
-        </div>
-        <div className="Action-buttons-wrapper">
-          <PrimaryButton text="Hello" />
-          //button small and actions to add
-        </div>
-      </div>
+    <div className=" outer-container w-full mx-10 ">
+      <NavBlocker />
+      <HeaderSection data={HeaderData} />
       <div className="Container-inner flex gap-[30px]">
-        <div className="Main-section border border-general-50 rounded-md p-7 basis-9/12">
+        <div className="Main-section card basis-9/12">
           <div className="product-adder-card">
-            <div className="header text-paraBold text-general-100 mb-6 text-left">
+            <div className="header text-paraBold mb-6 text-left">
               Products{" "}
               <span className="text-general-80 text-para ml-2"> 12</span>
             </div>

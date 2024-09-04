@@ -1,21 +1,36 @@
 import React from "react";
 import PrimaryButton from "../../Components/Buttons/PrimaryButton";
 import PricingBox from "../../Components/PricingBox/PricingBox";
+import HeaderSection from "../../Components/Header-Section/HeaderSection";
+import NavBlocker from "../../Components/NavFlat/NavBlocker";
+import Accordion from "../../Components/Accordion/Accordion";
 
 function PricingPage() {
+  const HeaderData = [
+    { header: "Settings" },
+    { backlink: "" },
+    {
+      buttons: [
+        // {
+        //   primary: false,
+        //   buttonText: "Cancel",
+        //   // icon: <Settings color={"#1E5EFF"} />,
+        // },
+        // {
+        //   primary: true,
+        //   buttonText: "Save",
+        //   // icon: <AddIcon color={"#ffffff"} />,
+        // },
+      ],
+    },
+  ];
+
   return (
     <div className=" outer-container w-full mx-10">
-      <div className="Header-functions-wrapper">
-        <div className="Header-section text-Heading5 text-general-100 text-left">
-          Customer Information
-        </div>
-        <div className="Action-buttons-wrapper">
-          <PrimaryButton text="Hello" />
-          //button small and actions to add
-        </div>
-      </div>
+      <NavBlocker />
+      <HeaderSection data={HeaderData} />
       <div className="Container-inner flex gap-[30px] w-full">
-        <div className="Main-section border border-general-50 rounded-md p-7 w-full flex flex-col items-center  ">
+        <div className="Main-section border border-general-50 rounded-md p-7 w-full flex flex-col items-center bg-white ">
           <div className="cusomerinfo-card mb-10 flex flex-col items-center">
             <div className="text-Heading6 mb-4">Pricing Plans</div>
             <div className="text-para text-center text-general-80 max-w-[500px]">
@@ -38,16 +53,43 @@ function PricingPage() {
             <PricingBox recommended />
             <PricingBox />
           </div>
-        <div className="pricing-note text-para text-general-80 mt-7">
-          Cancel or upgrade your plan anytime
-        </div>
+          <div className="pricing-note text-para text-general-80 mt-7">
+            Cancel or upgrade your plan anytime
+          </div>
         </div>
 
         {/* <div className="Side-section flex flex-col  basis-3/12 gap-[30px]">
        
         </div> */}
       </div>
-      /// accordion and FAQ
+      <div className="Faq-wrapper p-7 mt-[30px] bg-white border rounded-md border-general-50">
+        <div className="Header text-Heading6 text-general-100 pb-7">
+          Frequently Asked Questions
+        </div>
+        <div className="accordion-wrapper">
+          <Accordion
+            header={"Is there any discount for yearly subscription?"}
+            content={
+              "You can cancel or change your subscription at any time without any additional charges. If you want to cancel your subscription go to your profile page and click on billing information."
+            }
+            
+          />
+        </div>
+      </div>
+      <div className="Faq-wrapper p-7 mt-[30px] bg-white border rounded-md border-general-50">
+        <div className="Header text-Heading6 text-general-100 pb-7">
+          Frequently Asked Questions
+        </div>
+        <div className="accordion-wrapper">
+          <Accordion
+            header={"Is there any discount for yearly subscription?"}
+            content={
+              "You can cancel or change your subscription at any time without any additional charges. If you want to cancel your subscription go to your profile page and click on billing information."
+            }
+            
+          />
+        </div>
+      </div>
     </div>
   );
 }

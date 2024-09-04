@@ -9,25 +9,29 @@ const NavigationPanel = () => {
   const [open, setopen] = useState(true);
 
   return (
-    <div className="p-4 bg-general-30 border-r h-full">
-      <div
-        onClick={() => {
-          setopen(!open);
-        }}
-      >
-        ###
+    <div className="Navigation wrapper sticky top-0 h-full ">
+      <div className="p-4 pt-20 bg-general-30 border-r  z-[4] h-screen">
+        <div className="wrapper">
+          <div
+            onClick={() => {
+              setopen(!open);
+            }}
+          >
+            ###
+          </div>
+          {Icons.map((component, index) => {
+            let Component = component.image;
+            return (
+              <Navigation
+                icon={Component}
+                item={component.item}
+                link={component.link}
+                open={open}
+              />
+            );
+          })}
+        </div>
       </div>
-      {Icons.map((component, index) => {
-        let Component = component.image;
-        return (
-          <Navigation
-            icon={Component}
-            item={component.item}
-            link={component.link}
-            open={open}
-          />
-        );
-      })}
     </div>
   );
 };

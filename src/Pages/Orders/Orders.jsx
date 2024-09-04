@@ -5,23 +5,39 @@ import SearchInput from "../../Components/Input/Medium/SearchInput";
 import Table from "../../Components/Table/TableFile";
 import orders from "../../api/Orders.json";
 import "./styles.css";
+import HeaderSection from "../../Components/Header-Section/HeaderSection";
+import NavBlocker from "../../Components/NavFlat/NavBlocker";
+import TableAction from "../../Layouts/TableActions/TableAction";
+import AddIcon from "../../Images/IconComponents/AddIcon";
 
-const tableouter =
-  "tabelPadding px-7 pt-7 pb-5 border-general-40 border rounded-[6px]";
+const HeaderData = [
+  { header: "Orders" },
+  { backlink: "" },
+  {
+    buttons: [
+      {
+        primary: false,
+        buttonText: "Export",
+        // icon: <Settings color={"#1E5EFF"} />,
+      },
+      {
+        primary: true,
+        buttonText: "Add Orders",
+        icon: <AddIcon color={"#ffffff"} />,
+      },
+    ],
+  },
+];
+
 function Orders() {
   return (
     <div className=" outer-container w-full mx-10">
-      <div className="Header-functions-wrapper">
-        <div className="Header-section text-Heading5 text-general-100">
-          Orders
-        </div>
-      </div>
+      <NavBlocker />
+      <HeaderSection data={HeaderData} />
       <div className="Container-inner">
         <div className="order-action-panel mb-4">
-          <div className={tableouter}>
-            <div className="searchinput w-[350px] mb-4">
-              <SearchInput placeholder="Search" Icon={Icon} />
-            </div>
+          <div className="tabelPadding card pb-5">
+            <TableAction />
             <Table data={orders} Header={"Orders"} check />
           </div>
         </div>

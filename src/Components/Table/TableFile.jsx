@@ -7,6 +7,7 @@ import TDImage from "./TableData/TDImage";
 import image from "./../../Images/Image.jpg";
 import CheckBox from "../Others/CheckBox";
 import OrderStatus from "../Others/OrderStatus";
+import OutStock from "../Others/OutStock";
 
 ///////////Instruction////////////////////
 //selecting a column   - colum name + first word of column Header
@@ -20,8 +21,8 @@ import OrderStatus from "../Others/OrderStatus";
 // let NamingHeades = Object.keys(data[0]);
 
 // function Table(props) {
-function Table({ Header, check, data, styling }) {
-  console.log(data, "from tabele");
+function Table({ Header, check, data, styling, action }) {
+  // console.log(data, "from tabele");
   // console.log(props.data[0]);
   // const result = data.map((item) => {
   //   return Object.keys(data[0]).map((x) => {
@@ -37,24 +38,29 @@ function Table({ Header, check, data, styling }) {
   return (
     // <></>
     <div className={`w-full`}>
-      <div className="Header text-paraBold text-left mb-5 text-general-100 ">
-        {Header}
-      </div>
+      {Header ? (
+        <div className="Header text-paraBold text-left mb-5 text-general-100 ">
+          {Header}
+        </div>
+      ) : null}
       <table className="text-left  border-zinc-400 w-full">
         <tbody>
-          <tr className="Header wrapper  border-b-2 border-general-40">
+          <tr className="Header wrapper  border-b border-general-40">
             {/* {check && <CheckBox />} */}
             {Object.keys(data[0])
               // .splice(1, data.length)
-              .map((headers) => (
-                <th
-                  className={`text-text2reg px-2 py-3 text-general-80 ${
-                    headers + Header
-                  }`}
-                >
-                  {headers}
-                </th>
-              ))}
+              .map((headers) => {
+                return headers === "category" ||
+                  headers === "product-Name" ? null : (
+                  <th
+                    className={`text-text2reg px-2 py-3 text-general-80 ${
+                      headers + Header
+                    }`}
+                  >
+                    {headers}
+                  </th>
+                );
+              })}
             {/* <th className="text-text2reg px-2 py-3 text-general-80">Date</th>
         <th className="text-text2reg px-2 py-3 text-general-80">Amount</th>
       <th className="text-text2reg px-2 py-3 text-general-80">Status</th> */}
@@ -63,7 +69,11 @@ function Table({ Header, check, data, styling }) {
 
           {data.map((y, i) => {
             return (
-              <tr>
+              <tr className="border-b border-general-40"
+              // onClick={() => {
+              //   return action();
+              // }}
+              >
                 {Object.entries(data[i])
                   // .slice(1, data.length)
                   .map((x) => {
@@ -101,7 +111,6 @@ function Table({ Header, check, data, styling }) {
                       return <OrderStatus status={x[1]} />;
                     }
                     if (x[0] === "product-image") {
-                      console.log(y["product-Name" && "product-image"]);
                       return (
                         <div className={x[0] + Header}>
                           <TDImage
@@ -111,6 +120,28 @@ function Table({ Header, check, data, styling }) {
                           />
                         </div>
                       );
+                    }
+                    if (x[0] === "user-name") {
+                      return (
+                        <div className={x[0] + Header}>
+                          <TDImage Name={x[1]} ItemName={y["user-name"]} />
+                        </div>
+                      );
+                    }
+
+                    if (x[0] === "coupon-name") {
+                      return (
+                        <div className={x[0] + Header}>
+                          <TDImage
+                            category={y["category"]}
+                            ItemName={x[1]}
+                            subTxt={y["category"]}
+                          />
+                        </div>
+                      );
+                    }
+                    if (x[0] === "inventory") {
+                      return <OutStock item={x[1]} />;
                     }
                     // user name with avatar
                     // if (x[0] === "user-name") {
@@ -123,7 +154,9 @@ function Table({ Header, check, data, styling }) {
                     //     />
                     //   );
                     // }
-                    return (
+                    return x[0] === "category" ||
+                      x[0] === "product-Name" ? null : (
+                      // skipping category from the list
                       <td className={x[0] + Header}>
                         <TD item={x[1]} />
                       </td>
