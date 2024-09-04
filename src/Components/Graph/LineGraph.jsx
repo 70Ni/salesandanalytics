@@ -5,7 +5,7 @@ import "./styles.css";
 import data from "../../api/OrdersOvertime.json";
 
 const CHARTOPTIONS = {
-  // maintainAspectRatio: true,
+  maintainAspectRatio: false,
   responsive: true,
   layout: {},
 
@@ -106,10 +106,12 @@ const arr = data.map((x) => {
   });
 });
 
+
 function LineGraph() {
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full graphwrapper h-[300px] max-[1358px]:h-auto">
       <Line
+      
         data={{
           labels: array,
           datasets: [
