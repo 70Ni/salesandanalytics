@@ -1,15 +1,15 @@
 import React from "react";
 
-function OutStock({ item }) {
+function OutStock({ item, classn }) {
   return (
-    <td>
+    <td className={classn}>
       {item ? (
-        item
+        <div className="text-text2reg px-2 py-4 text-general-100">{item}</div>
       ) : (
         <div
           className={`px-2 py-[2px] text-text2reg flex items-center justify-center text-general-80 bg-general-40 whitespace-nowrap w-fit rounded`}
         >
-          Out of Stock
+          Out Stock
         </div>
       )}
     </td>
