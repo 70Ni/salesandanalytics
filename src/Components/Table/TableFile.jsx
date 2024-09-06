@@ -69,10 +69,11 @@ function Table({ Header, check, data, styling, action }) {
 
           {data.map((y, i) => {
             return (
-              <tr className="border-b border-general-40"
-              // onClick={() => {
-              //   return action();
-              // }}
+              <tr
+                className="border-b border-general-40"
+                // onClick={() => {
+                //   return action();
+                // }}
               >
                 {Object.entries(data[i])
                   // .slice(1, data.length)
@@ -117,6 +118,7 @@ function Table({ Header, check, data, styling, action }) {
                             ProductImg={x[1]}
                             ItemName={y["product-Name"]}
                             subTxt={y.category}
+                            class={x[0] + Header}
                           />
                         </div>
                       );
@@ -124,7 +126,11 @@ function Table({ Header, check, data, styling, action }) {
                     if (x[0] === "user-name") {
                       return (
                         <div className={x[0] + Header}>
-                          <TDImage Name={x[1]} ItemName={y["user-name"]} />
+                          <TDImage
+                            Name={x[1]}
+                            ItemName={y["user-name"]}
+                            classn={x[0] + Header}
+                          />
                         </div>
                       );
                     }
@@ -141,7 +147,7 @@ function Table({ Header, check, data, styling, action }) {
                       );
                     }
                     if (x[0] === "inventory") {
-                      return <OutStock item={x[1]} />;
+                      return <OutStock classn={x[0] + Header} item={x[1]} />;
                     }
                     // user name with avatar
                     // if (x[0] === "user-name") {
