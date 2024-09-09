@@ -9,7 +9,7 @@ function OrderStatus({ status, name }) {
     <td>
       {status === "Received" ? (
         <div
-          className={`orderStatus px-2 py-[2px] my-3 mx-2 text-text2reg rounded text-center w-[70px] ${
+          className={`orderStatus px-2 py-[2px] my-3 mx-2 para rounded text-center w-[70px] ${
             status === "Received" ? Received : null
           }`}
         >
@@ -17,7 +17,7 @@ function OrderStatus({ status, name }) {
         </div>
       ) : (
         <div
-          className={`orderStatus px-2 py-[2px] my-3 mx-2 text-text2reg rounded text-center w-[70px] ${
+          className={`orderStatus px-2 py-[2px] my-3 mx-2 para rounded text-center w-[70px] ${
             status === "Ready" ? Ready : Shipped
           }`}
         >
