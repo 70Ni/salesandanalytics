@@ -50,9 +50,9 @@ function Navigation({ item, link, icon, open }) {
           <Icon color={link === location.pathname ? iconActive : iconPassive} />
           {open ? (
             <div
-              className={`item-Name ${
+              className={`item-Name ease-in-out duration-700 ${
                 open ? "visible" : "invisible"
-              } text-text2med whitespace-nowrap ${
+              } paraMed whitespace-nowrap ${
                 link === location.pathname ? "text-white" : "text-general-80"
               } mx-4`}
             >
