@@ -46,13 +46,26 @@ import ProductsPage from "./Pages/Products/ProductsPage";
 import CategorieSection from "./Pages/Categories/CategorieSection";
 import ReportPage from "./Pages/Report/ReportPage";
 import EmptyPage from "./Pages/EmptyPage";
+import { useState } from "react";
 
 const theme = "darkmode";
 
 function App() {
+  const navOpen = () => {
+    setNavOpen(true);
+  };
+  const navClose = () => {
+    setNavOpen(false);
+  };
+  const navToggle = () => {
+    setNavOpen(!NavOpen);
+  };
+
+  const [NavOpen, setNavOpen] = useState(false);
+
   return (
-    <div className={`App flex w-full bg-general-30`}>
-      <TopBar />
+    <div className={`App duration-700 flex w-full h-full bg-general-30`}>
+      <TopBar action={navToggle} />
       {/* <BrowserRouter> */}
       {/* <Routes>
           <Route path="home" element={<Table />} />
@@ -79,7 +92,11 @@ function App() {
         <div className="sticky top-0 p-7 bg-slate-300">Hello there</div>
         <div className="pb-[2000px]"></div>
       </div> */}
-      <NavigationPanel />
+      <NavigationPanel
+        mobNavOpen={navOpen}
+        mobNavClose={navClose}
+        mobNavState={NavOpen}
+      />
       <Routes>
         <Route path="/dashboard" element={<Dashboard />}></Route>
         <Route path="/orders" element={<Orders />}></Route>
