@@ -8,13 +8,13 @@ const pos = "text-green-100";
 
 function SumCard({ data }) {
   return (
-    <div className="SumCard text-start flex items-center justify-between py-compact lg:py-7 px-7 w-full h-full ">
+    <div className="flexbt p-base  max-[506px]:p-mobile ">
       <div className="left mr-6 xl:mr-12">
-        <div className="text-Heading6 text-general-100">{data.rate}</div>
-        <div className="text-text2reg text-general-80">{data.type}</div>
+        <div className="subHeader">{data.rate}</div>
+        <div className="para">{data.type}</div>
         <div className="vectorwrapper flex items-center mt-2">
           <div
-            className={`text-text2reg mr-1 ${
+            className={`text-text2reg font-Inter mr-1 ${
               data.direction == "positive" ? pos : neg
             }`}
           >
@@ -38,7 +38,7 @@ function SumCard({ data }) {
         </div>
       </div>
       <div className="right">
-        <div className="wrapper h-14 w-14 rounded-full bg-primary-30 flex justify-center items-center">
+        <div className="wrapper px56  rounded-full bg-primary-30 flex justify-center items-center">
           <img src={data.Image} alt="" className="absolute" />
         </div>
       </div>
