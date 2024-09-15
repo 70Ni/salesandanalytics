@@ -2,7 +2,7 @@ import React from "react";
 import PrimaryButton from "../../Components/Buttons/PrimaryButton";
 import ProductEdits from "../../Components/ProductEdits/ProductEdits";
 import WhiteButton from "../../Components/Buttons/WhiteButton";
-import InputFlex from "./Components/InputFlex";
+import InputFlex from "../../Layouts/InputFlex/InputFlex";
 import CustomerInformation from "./Components/CustomerInformation";
 import CustomerAddress from "./Components/CustomerAdress";
 import Input from "../../Components/Input/Medium/Input";
@@ -40,7 +40,7 @@ function CustomerAdd() {
   ];
 
   return (
-    <div className=" outer-container w-full mx-10">
+    <div className="outer-container">
       <NavBlocker />
       {/* <div className="Header-functions-wrapper">
         <div className="Header-section text-Heading5 text-general-100">
@@ -53,8 +53,8 @@ function CustomerAdd() {
       </div> */}
       <HeaderSection data={HeaderData} />
       <div className="Container-inner flex">
-        <div className="Main-section border border-general-50 rounded-md p-7 w-full bg-white">
-          <div className="product-adder-card flex  w-full flex-col gap-[30px]">
+        <div className="Main-section card">
+          <div className="product-adder-card flex  w-full flex-col gapping">
             <CustomerInformation />
             <CustomerAddress />
             <CustomerNotes />
@@ -63,7 +63,7 @@ function CustomerAdd() {
           <div className="border border-general-50"></div>
         </div> */}
         </div>
-        {/* <div className="Side-section flex flex-col  basis-3/12 gap-[30px]"></div> */}
+        {/* <div className="Side-section flex flex-col  basis-3/12 gapping"></div> */}
       </div>
       <FooterAction />
     </div>
