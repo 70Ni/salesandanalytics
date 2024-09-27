@@ -1,9 +1,9 @@
 import React from "react";
 
 let Icons =
-  "container flex items-center px-5 py-3 rounded bg-primary-40 w-fit cursor-pointer";
+  "container flex items-center p-p20 p-p12 rounded bg-primary-40 w-fit cursor-pointer";
 let text =
-  "container flex items-center px-6 py-3 rounded bg-primary-40 w-fit cursor-pointer";
+  "container flex items-center px-p24 p-p12 rounded bg-primary-40 w-fit cursor-pointer";
 
 function SecondaryButton(props) {
   return (
