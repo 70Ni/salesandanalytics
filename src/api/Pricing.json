@@ -1,0 +1,94 @@
+{
+  "annually": [
+    {
+      "plan": "$12",
+      "planType": "Basic Plan",
+      "features": {
+        "Free Domain": true,
+        "Google Ads Credit": true,
+        "Up to 5 Users": true,
+        "Free SSL Security": true,
+        "Up to 100 Products": true,
+        "Chat Inbox": false,
+        "Unlimited Storage": false,
+        "No Transaction Fee": false
+      }
+    },
+    {
+      "plan": "$20",
+      "recommended": true,
+      "planType": "Professional",
+      "features": {
+        "Free Domain": true,
+        "Google Ads Credit": true,
+        "Up to 5 Users": true,
+        "Free SSL Security": true,
+        "Up to 100 Products": true,
+        "Chat Inbox": true,
+        "Unlimited Storage": false,
+        "No Transaction Fee": false
+      }
+    },
+    {
+      "plan": "$45",
+      "planType": "Business",
+      "features": {
+        "Free Domain": true,
+        "Google Ads Credit": true,
+        "Up to 5 Users": true,
+        "Free SSL Security": true,
+        "Up to 100 Products": true,
+        "Chat Inbox": true,
+        "Unlimited Storage": true,
+        "No Transaction Fee": true
+      }
+    }
+  ],
+
+  "monthly": [
+    {
+      "plan": "$15",
+      "planType": "Basic Plan",
+
+      "features": {
+        "Free Domain": true,
+        "Google Ads Credit": true,
+        "Up to 5 Users": true,
+        "Free SSL Security": true,
+        "Up to 100 Products": true,
+        "Chat Inbox": false,
+        "Unlimited Storage": false,
+        "No Transaction Fee": false
+      }
+    },
+    {
+      "plan": "$24",
+      "recommended": true,
+      "planType": "Professional",
+      "features": {
+        "Free Domain": true,
+        "Google Ads Credit": true,
+        "Up to 5 Users": true,
+        "Free SSL Security": true,
+        "Up to 100 Products": true,
+        "Chat Inbox": true,
+        "Unlimited Storage": false,
+        "No Transaction Fee": false
+      }
+    },
+    {
+      "plan": "$80",
+      "planType": "Business",
+      "features": {
+        "Free Domain": true,
+        "Google Ads Credit": true,
+        "Up to 5 Users": true,
+        "Free SSL Security": true,
+        "Up to 100 Products": true,
+        "Chat Inbox": true,
+        "Unlimited Storage": true,
+        "No Transaction Fee": true
+      }
+    }
+  ]
+}
