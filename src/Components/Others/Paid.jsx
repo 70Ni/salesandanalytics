@@ -7,7 +7,7 @@ const existing = "";
 function Paid({ status, name }) {
   return (
     <div
-      className={`px-2 py-[2px] my-3 mx-2 text-text2reg rounded text-center w-[70px] ${
+      className={`px-2 py-[2px] my-3 mx-2 para rounded text-center w-[70px] ${
         status === "Paid" ? Pay : Pending
       }`}
     >
