@@ -5,11 +5,11 @@ function KnowledgeBaseCard() {
     <div>
       <div className="card-inner min-w-[254px]">
         <div className="card-content border border-general-50 rounded-md p-7">
-          <img src={illustration} alt="" className="m-auto mb-7" />
-          <div className="Header text-Heading6 mb-6 text-general-100 text-left ">
+          <img src={illustration} alt="" className="m-auto mb-base" />
+          <div className="Header text-Heading6 mb-p24 text-general-100 text-left ">
             Getting Started
           </div>
-          <div className="content-wraper mb-5 text-left">
+          <div className="content-wraper mb-p20 text-left">
             <div className="content text-text2reg mb-3">
               Guide to get started faster
             </div>
