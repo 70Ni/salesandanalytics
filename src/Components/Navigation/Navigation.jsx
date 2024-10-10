@@ -2,7 +2,6 @@ import React, { Component, useState, useEffect } from "react";
 import Badge from "./Badge";
 import KnowledgeIcon from "../../Images/IconComponents/KnowledgeIcon";
 import OrderIcon from "../../Images/IconComponents/OrderIcon";
-import { activate } from "firebase/remote-config";
 import { Link, useLocation } from "react-router-dom";
 import "./style.css";
 
