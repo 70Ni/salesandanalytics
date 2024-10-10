@@ -10,7 +10,7 @@ function CouponImg({ category }) {
   return (
     <>
       {category === "Discount" ? (
-        <div className="h-12 w-12">
+        <div className="h-12 w-12 mr-4">
           <div
             className={` ${couponBG}  w-12 h-12 flex items-center justify-center rounded mr-4`}
           >
@@ -18,7 +18,7 @@ function CouponImg({ category }) {
           </div>
         </div>
       ) : (
-        <div className="h-12 w-12">
+        <div className="h-12 w-12 mr-4">
           <div
             className={` ${shippingBG}  w-12 h-12 flex items-center justify-center rounded mr-4`}
           >

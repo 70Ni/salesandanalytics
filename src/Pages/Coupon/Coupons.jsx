@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBlocker from "../../Components/NavFlat/NavBlocker";
 import HeaderSection from "../../Components/Header-Section/HeaderSection";
 import AddIcon from "../../Images/IconComponents/AddIcon";
@@ -10,12 +10,16 @@ import FooterAction from "../../Components/FooterSave/FooterAction";
 import SectionNav from "../../Components/Navigation/SectionNav/SectionNav";
 
 function Coupons() {
-  const Sections = [
-    "All Customers",
-    "New Customers",
-    "Returning Customers",
-    "From Europe",
-  ];
+  const [Section, setSection] = useState("All Coupons");
+
+  const getNavSection = (e) => {
+    console.log(e);
+    if (e) {
+      return setSection(e);
+    }
+  };
+
+  const Sections = ["All Coupons", "Active Coupons", "Expired Coupons"];
 
   const HeaderData = [
     { header: "Create Coupon" },
@@ -40,21 +44,32 @@ function Coupons() {
       ],
     },
   ];
+
   return (
-    <div className="containerlg">
+    <div className="outer-container">
       <NavBlocker />
       <HeaderSection data={HeaderData} />
-      <div className="Container-inner flex w-full">
-        <div className="Main-section border border-general-50 rounded-md p-7 w-full bg-white">
-          <SectionNav Sections={Sections} action={null} />
-          <TableAction />
-          <div className="coupon-list-card flex flex-col gap-[30px]"></div>
-          <Table data={coupons} />
+      <div className="Container-inner">
+        <div className="order-action-panel mb-4">
+          <div className="tabelPadding card pb-p20">
+            <SectionNav Sections={Sections} action={getNavSection} />
+            <TableAction />
+            <div className="coupon-list-card flex flex-col gapping"></div>
+            {/* <Table data={coupons} /> */}
+            {Section === "All Coupons" && <Table data={coupons} />}
+            {Section === "Active Coupons" && (
+              <Table data={coupons.slice(1, 7)} />
+            )}
+            {Section === "Expired Coupons" && (
+              <Table data={coupons.slice(5, 10)} />
+            )}
+          </div>
         </div>
-        {/* <div className="Side-section flex flex-col  basis-3/12 gap-[30px]"></div> */}
+
+        {/* <div className="Side-section flex flex-col  basis-3/12 gapping"></div> */}
       </div>
     </div>
   );
 }
-
+//
 export default Coupons;

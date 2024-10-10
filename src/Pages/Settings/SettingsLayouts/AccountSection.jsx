@@ -1,7 +1,7 @@
 import React from "react";
 import Notification from "../Components/Notification";
 import Input from "../../../Components/Input/Medium/Input";
-import InputFlex from "../../Customers/Components/InputFlex";
+import InputFlex from "../../../Layouts/InputFlex/InputFlex";
 import DeleteIcon from "../../../Images/IconComponents/DeleteIcon";
 
 const settingList = [
@@ -35,18 +35,16 @@ function AccountSection() {
   return (
     <div>
       {/* <InputFlex title={["Fist Name", "Last Name"]} placeholder={["First Name","Last Name"]} /> */}
-      <div className="flex justify-between items-center">
-        <div className="header text-paraBold text-general-100 hover:bg-general-30 cursor-pointer w-full p-5 rounded-lg text-left">
+      <div className="flexbt">
+        <div className="header subHeader2 hover:bg-general-30 cursor-pointer w-full p-p20 rounded-lg text-left">
           Logout
-          <div className="para text-text2reg text-general-80 mt-1 text-left">
-            Logout from the account
-          </div>
+          <div className="para mt-1 text-left">Logout from the account</div>
         </div>
       </div>
-      <div className="flex justify-between items-center hover:bg-general-30 cursor-pointer w-full p-5">
-        <div className="header text-paraBold text-red-80  rounded-lg text-left">
+      <div className="flexbt hover:bg-general-30 cursor-pointer w-full p-p20">
+        <div className="header subHeader2 text-red-80  rounded-lg text-left">
           Deactivate Account
-          <div className="para text-text2reg text-red-70 mt-1 text-left">
+          <div className="para text-red-70 mt-1 text-left">
             Permanently Remove your Account
           </div>
         </div>

@@ -3,16 +3,18 @@ import React from "react";
 function RoundGraphDetails({ data }) {
   return (
     <div className="dataSet-wrapper">
-      {data.map((x) => {
+      {data.map((x)=>Object.entries(x).map((y) => {
+        console.log(y);
         return (
-          <div className="item-wrapper flex justify-between">
-            <div className="label text-text2reg text-general-80">Sold for:</div>
-            <div className="label text-text2Bold text-general-100">
-              {x.Left}
+          <div className="item-wrapper flex justify-between my-2">
+            <div className="label para">{y[0]}</div>
+            <div className="label paraBold">
+              {y[1]}
             </div>
           </div>
         );
-      })}
+      }))}
+      
     </div>
   );
 }

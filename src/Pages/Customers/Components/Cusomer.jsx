@@ -2,9 +2,10 @@ import React from "react";
 import Avatar from "../../../Components/Table/TableData/Images/48x48/Avatar";
 
 function Customer() {
+  let width = window.screen.width;
   return (
     <div className="cusomerinfo-card flex items-start mb-10 ">
-      <Avatar Name={"Lenora Robinson"} Large />
+      <Avatar Name={"Lenora Robinson"} Large={width > 380} />
       <div className="customer-content text-left ml-[18px]">
         <div className="text-paraBold mb-2">Lenora Robinson</div>
         <div className="text-text2reg text-general-80 flex flex-col">

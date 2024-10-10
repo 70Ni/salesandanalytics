@@ -2,8 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./Variables/Fonts.css";
+
 @layer base {
 }
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 
 :root {
   --primary-color: #fff;
@@ -13,9 +25,20 @@
   /* padding */
   --primary-padding: 28px;
   --second-padding: 20px;
-  /* Avatarsizes */
-  --Icon-size-sm: 20px;
+  --spacing-30px: 30px;
 
+  --spacing-24px: 24px;
+  --spacing-24px: 24px;
+  --spacing-20px: 20px;
+  --padding-16px: 16px;
+  --spacing-12px: 12px;
+  /* Avatarsizes */
+  
+  --Icon-size-xsm: 24px;
+  --Icon-size-sm: 36px;
+  --Icon-size-md: 48px;
+  --Icon-size-xmd: 56px;
+  --Icon-size-lg: 72px;
 }
 
 .swiss {
@@ -25,18 +48,46 @@
   --color-text-muted: #589bff;
 }
 
+.Darkmode {
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --color-text-base: #000;
+  --top-bar: #0f172a;
+  --background: #020617;
+  --background-card: #0f172a;
+}
+
 .compact {
   --primary-padding: 16px;
   --second-padding: 16px;
+  --spacing-30px: 16px;
+  --spacing-24px: 16px;
+  --spacing-20px: 8px;
+  --padding-16px: 8px;
+  --spacing-12px: 8px;
+
+  /* icon Sizes */
+  --Icon-size-xsm: 24px;
+  --Icon-size-sm: 24px;
+  --Icon-size-md: 24px;
+  --Icon-size-xmd: 24px;
+  --Icon-size-lg: 24px;
+}
+
+.absoluteImportant {
+  position: absolute !important;
 }
 
 @media screen and (max-width: 776px) {
-  .outer-container {
+  /* .outer-container {
     margin: 0px 16px;
-  }
-  .outer-container {
+  } */
+
+  /* /////////////after removing outer-container with margin 0 15px the window get enlarged like overflow: ; */
+  /* condition at outer-container while above >>>>>>>>>max-[775px]:px-p15 */
+  /* .outer-container {
     margin-bottom: 40px;
-  }
+  } */
 }
 
 @media screen and (max-width: 992px) {
@@ -67,19 +118,184 @@
 }
 
 @media screen and (max-width: 506px) {
-  .Page-Section {
+  /* .Page-Section {
     gap: 16px;
   }
   .horizonal-gap {
     gap: 16px;
-  }
+  } */
   .card {
-    padding: 20px;
+    /* padding: 20px; */
   }
   .Header-functions-wrapper {
     margin: 14px 0px;
   }
 }
+
+/* ////////////////////////categories page ////////////// */
+
+@media screen and (max-width: 400px) {
+  .category-card {
+    width: auto;
+  }
+}
+
+/* /////////////CategoryEditPage //////////////// */
+
+/* @media screen and (max-width: 580px) {
+  .category-Cards-wrapper {
+    flex-direction: column;
+  }
+} */
+
+/* /////////////////Customers Page /////////////////// */
+@media screen and (max-width: 580px) {
+  .locationundefined {
+    display: none;
+  }
+  .customer-content {
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .user-nameundefinedavatar {
+    display: none;
+  }
+  .user-nameundefinedwrapper {
+    margin-left: none;
+  }
+}
+
+/* ///customers Page */
+@media screen and (max-width: 580px) {
+  .Header-functions-wrapper {
+    flex-wrap: wrap;
+  }
+  .Header-text-section {
+    margin-bottom: 12px;
+    margin-right: 14px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .Action-buttons-wrapper {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+/* ///////product Pgage */
+
+@media screen and (max-width: 918px) {
+  .votesundefined {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .priceundefined {
+    display: none;
+  }
+}
+@media screen and (max-width: 478px) {
+  .inventoryundefined,
+  .colorundefined {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .usedundefined {
+    display: none;
+  }
+}
+@media screen and (max-width: 938px) {
+  .endundefined {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 764px) and (max-width: 844px) {
+  .startingundefined {
+    display: none;
+  }
+}
+@media screen and (max-width: 632px) {
+  .startingundefined {
+    display: none;
+  }
+}
+
+/* ///////////////coupon page only to 340px  */
+@media screen and (max-width: 500px) {
+  .codeundefined {
+    display: none;
+  }
+}
+
+/* /////////////Report Page start here //////////// */
+@media screen and (max-width: 500px) {
+  .codeundefined {
+    display: none;
+  }
+}
+
+/* //////////////report page */
+@media screen and (max-width: 1026px) {
+  .orderStatus {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 506px) {
+  /* .orderStatus,
+  .report-round-graph-wrapper,
+  .report-Graph-wrapper,
+  .report-DashTable {
+    gap: 16px;
+  } */
+}
+@media screen and (max-width: 978px) {
+  .report-DashTable {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 978px) {
+  /* .report-round-graph-wrapper {
+    flex-direction: column;
+  } */
+}
+
+/* ////product Add Section  */
+@media screen and (max-width: 954px) {
+  .Tabletinfo {
+    flex-direction: column;
+  }
+  .Tabletinfo-reverse {
+    flex-direction: column-reverse;
+  }
+}
+
+/* //////customer info /////////// */
+
+@media screen and (max-width: 954px) {
+  .DateCustomer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .StatusCustomer {
+    display: none;
+  }
+}
+/* //////////////////// */
+@media screen and (min-width: 478px) and (max-width: 954px) {
+  .category-tag-wrapper {
+    flex-direction: row;
+  }
+}
+
 /* 
 body {
   margin: 0;
@@ -108,42 +324,42 @@ code {
 }
 @layer components {
   /* //fonts */
-  .subHeader {
-    @apply text-Heading6 text-general-100 font-Inter;
-  }
-  .subHeader2 {
-    @apply text-paraBold text-general-100 font-Inter;
-  }
 
-  /* Paragraphs are 14px Font size */
-  .para {
-    @apply text-text2reg text-general-80 font-Inter;
-  }
-  .paraMed {
-    @apply text-text2med text-general-100 font-Inter;
-  }
-  .paraBold {
-    @apply text-text2Bold text-general-100 font-Inter;
-  }
   /* //cards */
   .card {
-    @apply border  border-general-40  rounded-md p-base bg-white w-full;
+    @apply border  border-general-40  rounded-md p-base bg-white w-full max-[506px]:p-mobile;
+  }
+  .gapping {
+    @apply gap30 max-[506px]:gap16;
+  }
+  .px56 {
+    @apply h-cxmd w-cxmd;
+  }
+  .side-mini-wrapper {
+    @apply [478px]:;
   }
   .containerlg {
     @apply w-full mx-10;
   }
-  .containercompact {
+  /* .containercompact {
     @apply w-full mx-4;
-  }
+  } */
   .border {
     @apply border-b border-general-40 w-full;
   }
+  .outer-container {
+    @apply w-full px-10 max-[776px]:px-p16;
+  }
+  .kbcard {
+    @apply max-[452px]:flex  max-[452px]:flex-col max-[452px]:items-center;
+  }
+
   /* flexlayouts */
   .gap30 {
-    @apply gap-[30px];
+    @apply gap-p30;
   }
   .gap16 {
-    @apply gap-[16px];
+    @apply gap-p16;
   }
   .flexbt {
     @apply flex items-center justify-between;

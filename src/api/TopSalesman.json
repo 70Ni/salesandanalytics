@@ -2,31 +2,31 @@
     {
         "Name": "Leroy Wise",
         "Sold": 48,
-        "Amount": 22.969,
+        "Amount": "$22.969",
     "image": "src/Images/SalesMan/avatar-2.png"
   },
   {
     "Name": "Sean Hill",
     "Sold": 42,
-    "Amount": 20.54,
+    "Amount": "$20.54",
     "image": "src/Images/SalesMan/Bitmap.png"
   },
   {
       "Name": "Lottie Gray",
       "Sold": 34,
-    "Amount": 19.435,
+    "Amount": "$19.435",
     "image": "src/Images/SalesMan/avatar-1.png"
 },
 {
     "Name": "Sadie Ramsey",
     "Sold": 28,
-    "Amount": 16.49,
+    "Amount": "$16.49",
     "image": "src/Images/SalesMan/avatar.png"
 },
   {
       "Name": "Floyd Pearson",
     "Sold": 26,
-    "Amount": 12.355,
+    "Amount": "$12.355",
     "image": "src/Images/SalesMan/avatar-3.png"
   }
 ]

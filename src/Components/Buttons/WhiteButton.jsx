@@ -18,7 +18,7 @@ function WhiteButton(props) {
   };
   return (
     <div className={props.icon ? Icons : text} onClick={handleClick}>
-      {props.icon && <img src={props.icon} alt="" className="mr-[10px]" />}
+      {/* {props.icon && <img src={props.icon} alt="img" className="mr-[10px]" />} */}
       {props.icon ? props.icon : null}
       <div className=" text-primary-100 text-para text whitespace-nowrap">
         {props.text}

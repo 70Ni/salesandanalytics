@@ -7,7 +7,7 @@ import AddIcon from "../../Images/IconComponents/AddIcon";
 import TableAction from "../../Layouts/TableActions/TableAction";
 
 const HeaderData = [
-  { header: "Orders" },
+  { header: "Products" },
   { backlink: "" },
   {
     buttons: [
@@ -29,17 +29,20 @@ const HeaderData = [
   },
 ];
 
-const tableouter =
-  "tabelPadding px-7 pt-7 pb-5 border-general-40 border rounded-[6px] bg-white";
-
 function ProductsPage() {
+  const file = {
+    user: 20,
+  };
+
+  console.log(file["user"]);
+
   return (
-    <div className=" outer-container w-full mx-10">
+    <div className=" outer-container">
       <NavBlocker />
       <HeaderSection data={HeaderData} />
       <div className="Container-inner">
         <div className="order-action-panel mb-4">
-          <div className={tableouter}>
+          <div className="card">
             <TableAction />
             <Table data={orders} check />
           </div>

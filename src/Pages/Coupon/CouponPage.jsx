@@ -43,9 +43,9 @@ function CouponPage() {
       </div> */}
       <NavBlocker />
       <HeaderSection data={HeaderData} />
-      <div className="Container-inner flex w-full">
+      <div className="Container-inner">
         <div className="Main-section card">
-          <div className="product-adder-card flex flex-col gap30">
+          <div className="product-adder-card flex flex-col gapping">
             <CouponInformation />
             <div className="border"></div>
             <CouponType />
@@ -56,7 +56,7 @@ function CouponPage() {
           <div className="border border-general-50"></div>
         </div> */}
         </div>
-        {/* <div className="Side-section flex flex-col  basis-3/12 gap-[30px]"></div> */}
+        {/* <div className="Side-section flex flex-col  basis-3/12 gapping"></div> */}
       </div>
       <FooterAction />
     </div>

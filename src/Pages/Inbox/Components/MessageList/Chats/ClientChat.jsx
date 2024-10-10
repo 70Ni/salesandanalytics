@@ -7,7 +7,7 @@ function ClientChat() {
       <User small />
       <div className={`text-left ml-4 message-time`}>
         <div
-          className={`Chat p-3 bg-primary-90 rounded text-text2reg w-fit text-white`}
+          className={`Chat p-p12 bg-primary-90 rounded text-text2reg w-fit text-white`}
         >
           Hi, I wonder when if there is going to be anything new for spring?
         </div>

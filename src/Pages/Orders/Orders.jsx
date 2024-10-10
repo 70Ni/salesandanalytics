@@ -31,12 +31,12 @@ const HeaderData = [
 
 function Orders() {
   return (
-    <div className=" outer-container w-full mx-10">
+    <div className="outer-container">
       <NavBlocker />
       <HeaderSection data={HeaderData} />
       <div className="Container-inner">
         <div className="order-action-panel mb-4">
-          <div className="tabelPadding card pb-5">
+          <div className="tabelPadding card pb-p20">
             <TableAction />
             <Table data={orders} Header={"Orders"} check />
           </div>

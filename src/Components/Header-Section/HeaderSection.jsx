@@ -9,10 +9,8 @@ function HeaderSection({ data }) {
   const handleClick = () => {
     navigate(data[1].backlink);
   };
-
-  console.log(data);
   return (
-    <div className="Header-functions-wrapper flexbt my-7">
+    <div className="Header-functions-wrapper flexbt my-p16">
       <div className="Header-text-section">
         {data[1].backlink && (
           <div
@@ -25,7 +23,7 @@ function HeaderSection({ data }) {
         )}
         <div className="Header-section subHeader">{data[0].header}</div>
       </div>
-      <div className="Action-buttons-wrapper flex w-fit gap-3">
+      <div className="Action-buttons-wrapper flex w-fit gap-p12">
         {data[2] &&
           data[2].buttons.map((x) => {
             return x.primary ? (

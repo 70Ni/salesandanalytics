@@ -6,7 +6,7 @@ import UserDetails from "../UserDetails/UserDetails";
 
 function UserCard() {
   return (
-    <div className="flex items-center gap-4 px-7 py-6 hover:bg-primary-30">
+    <div className="flex items-center gap-p16 px-7 py-p24 hover:bg-primary-30">
       <User  online />
       <UserDetails />
     </div>

@@ -29,8 +29,8 @@ function Table({ Header, check, data }) {
   }
   return (
     // <></>
-    <div className="px-7 pt-7 pb-5 border rounded-[6px] w-full border-general-40">
-      <div className="Header text-paraBold text-left mb-5 text-general-100 ">
+    <div className="px-7 pt-7 pb-p20 border rounded-[6px] w-full border-general-40">
+      <div className="Header text-paraBold text-left mb-p20 text-general-100 ">
         {Header}
       </div>
       <table className="text-left  border-zinc-400 w-full">
@@ -39,12 +39,12 @@ function Table({ Header, check, data }) {
           {Object.keys(data[0])
             .splice(1, data.length)
             .map((x) => (
-              <th className="text-text2reg px-2 py-3 text-general-80">{x}</th>
+              <th className="text-text2reg px-2 p-p12 text-general-80">{x}</th>
             ))}
 
-          {/* <th className="text-text2reg px-2 py-3 text-general-80">Date</th>
-        <th className="text-text2reg px-2 py-3 text-general-80">Amount</th>
-        <th className="text-text2reg px-2 py-3 text-general-80">Status</th> */}
+          {/* <th className="text-text2reg px-2 p-p12 text-general-80">Date</th>
+        <th className="text-text2reg px-2 p-p12 text-general-80">Amount</th>
+        <th className="text-text2reg px-2 p-p12 text-general-80">Status</th> */}
         </tr>
 
         {data.map((y, i) => {})}

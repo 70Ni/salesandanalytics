@@ -5,7 +5,24 @@
 }
 
 @media screen and (max-width: 785px) {
-    .orderStatus .order-statusOrders {
-      display: none;
-    }
+  .orderStatus .order-statusOrders {
+    display: none;
   }
+}
+@media screen and (max-width: 534px) {
+  .DateOrders {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 448px) {
+  .payment-statusOrders {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .customerOrders  {
+    display: none;
+  }
+}

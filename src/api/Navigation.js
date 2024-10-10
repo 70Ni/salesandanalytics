@@ -11,68 +11,74 @@ import ReportsIcon from "../Images/IconComponents/ReportsIcon";
 import Settings from "../Images/IconComponents/Settings";
 import UpdateIcon from "../Images/IconComponents/UpdateIcon";
 
-const Icons = [
-  {
-    image: HomeIcon,
-    item: "Dashboard",
-    link: "/dashboard",
-  },
-  {
-    image: OrderIcon,
-    item: "Orders",
-    link: "/orders",
-  },
-  {
-    image: ProductIcon,
-    item: "Products",
-    link: "/products",
-  },
-  {
-    image: FolderIcon,
-    item: "Categories",
-    link: "/categories",
-  },
-  {
-    image: CustomersIcon,
-    item: "Customers",
-    link: "/customers",
-  },
-  {
-    image: ReportsIcon,
-    item: "Reports",
-    link: "/reports",
-  },
-  {
-    image: CouponIcon,
-    item: "Coupons",
-    link: "/coupons",
-  },
-  {
-    image: InboxIcon,
-    item: "Inbox",
-    link: "/inbox",
-  },
-  {
-    image: KnowledgeIcon,
-    item: "Knowledge Base",
-    link: "/knowledge-base",
-  },
-  {
-    image: UpdateIcon,
-    item: "Product Updates",
-    link: "/product-updates",
-  },
-  {
-    image: ProfileIcon,
-    item: "Person Settings",
-    link: "/personal-settings",
-  },
-  {
-    image: Settings,
-    item: "Global Settings",
-    link: "/global-settings",
-  },
-];
+const Icons = {
+  main: [
+    {
+      image: HomeIcon,
+      item: "Dashboard",
+      link: "/dashboard",
+    },
+    {
+      image: OrderIcon,
+      item: "Orders",
+      link: "/orders",
+    },
+    {
+      image: ProductIcon,
+      item: "Products",
+      link: "/products",
+    },
+    {
+      image: FolderIcon,
+      item: "Categories",
+      link: "/categories",
+    },
+    {
+      image: CustomersIcon,
+      item: "Customers",
+      link: "/customers",
+    },
+    {
+      image: ReportsIcon,
+      item: "Reports",
+      link: "/reports",
+    },
+    {
+      image: CouponIcon,
+      item: "Coupons",
+      link: "/coupons",
+    },
+    // {
+    //   image: InboxIcon,
+    //   item: "Inbox",
+    //   link: "/inbox",
+    // },
+  ],
 
+  "Other Information": [
+    {
+      image: KnowledgeIcon,
+      item: "Knowledge Base",
+      link: "/knowledge-base",
+    },
+    {
+      image: UpdateIcon,
+      item: "Product Updates",
+      link: "/product-updates",
+    },
+  ],
 
+  settings: [
+    {
+      image: ProfileIcon,
+      item: "Person Settings",
+      link: "/personal-settings",
+    },
+    {
+      image: Settings,
+      item: "Global Settings",
+      link: "/global-settings",
+    },
+  ],
+};
 export default Icons;

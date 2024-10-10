@@ -7,7 +7,7 @@ function DefaultCard({ header, content, cta }) {
           <div className="Header text-Heading6 mb-3 text-general-100 text-left ">
             {header}
           </div>
-          <div className="content-wraper mb-5 text-left">
+          <div className="content-wraper mb-p20 text-left">
             <div className="content text-text2reg flex-1 ">{content}</div>
           </div>
           <div className="content text-left text-text2reg text-primary-100 mb-3 cursor-pointer">

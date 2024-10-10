@@ -1,6 +1,6 @@
 import React from "react";
 import Input from "../../../Components/Input/Medium/Input";
-import InputFlex from "../../Customers/Components/InputFlex";
+import InputFlex from "../../../Layouts/InputFlex/InputFlex";
 import CardHeader from "../../../Components/CardHeader/CardHeader";
 
 function CouponInformation() {

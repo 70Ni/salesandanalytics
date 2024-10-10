@@ -8,9 +8,9 @@ function LastSale() {
       <div className="content-wrapper">
        
         <CardHeader
-          Header="Orders Over Time"
+          Header="Last 7 Days Sales"
         />
-        <div className="det-wrapper flex flex-col gap-5 mt-6">
+        <div className="det-wrapper flex flex-col gap-p20 mt-6">
           <div className="order-det-span flex flex-col items-start mr-10">
             <div className="subHeader">1,259</div>
             <div className="para">Items Sold </div>

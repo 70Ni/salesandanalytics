@@ -11,8 +11,8 @@ const action = {
 
 function CategoriesCard({ data }) {
   return (
-    <div className="category-card rounded-md bg-white w-[350px] flex-grow">
-      <div className="imagesection w-full bg-black rounded-t-lg flex items-center justify-center relative">
+    <div className="category-card rounded-md bg-white w-[350px] max-[400px]:w-auto flex-grow">
+      <div className="imagesection w-full bg-black rounded-t-lg flexbt relative">
         <div className="hover-slide  flexbt justify-center rounded-t-lg  w-full h-full bg-general-90 bg-opacity-50 absolute opacity-0 hover:opacity-100">
           <div className="hoverbutton">
             <WhiteButton text="Edit" icon={Icon} action={action} />
@@ -24,13 +24,9 @@ function CategoriesCard({ data }) {
           className="image w-full  h-[240px]  object-cover rounded-t-md"
         />
       </div>
-      <div className="text-section py-5 px-7">
-        <div className="category-name text-paraBold">
-          {data.Category}
-        </div>
-        <div className="category-count para">
-          {data.itemCount} items
-        </div>
+      <div className="text-section p-p20 px-7">
+        <div className="category-name text-paraBold">{data.Category}</div>
+        <div className="category-count para">{data.itemCount} items</div>
       </div>
     </div>
   );

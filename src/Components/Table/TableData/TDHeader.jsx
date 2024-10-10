@@ -1,7 +1,7 @@
 import React from "react";
 
 function TDHeader({ item }) {
-  return <div className={`text-text2med px-2 py-3 text-general-100 ${item}`}>{item}</div>;
+  return <div className={`paraBold px-2 p-p12 ${item}`}>{item}</div>;
 }
 
 export default TDHeader;

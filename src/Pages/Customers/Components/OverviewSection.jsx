@@ -2,8 +2,8 @@ import React from "react";
 
 function OverviewSection() {
   return (
-    <div className="Category-Card border p-7 pb-5 border-general-50 rounded-md w-full bg-white">
-      <div className="Header-wrapper flex items-center justify-between mb-6">
+    <div className="Category-Card border p-7 pb-p20 border-general-50 rounded-md w-full bg-white">
+      <div className="Header-wrapper flex items-center justify-between mb-p24">
         <div className="header text-paraBold text-general-100 text-left">
           Overview
         </div>

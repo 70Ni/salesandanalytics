@@ -16,7 +16,7 @@ function Table() {
         return (
           <tbody className="flex w-full">
             <tr
-              className="w-full border p-4 flex items-center justify-start"
+              className="w-full border p-p16 flex items-center justify-start"
               key={i}
             >
               <img src={y["product-image"]} className="h-14 w-14" />
@@ -35,11 +35,11 @@ function Table() {
                 </section>
               </tr>
             </tr>
-            <tr className="w-full border p-4  " key={i}>
+            <tr className="w-full border p-p16  " key={i}>
               {y.color}
             </tr>
             <tr
-              className="w-full flex items-center justify-start border p-4  "
+              className="w-full flex items-center justify-start border p-p16  "
               key={i}
             >
               {y.price}

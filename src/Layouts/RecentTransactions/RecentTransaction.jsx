@@ -54,15 +54,14 @@ function RecentTransaction() {
   //     ]);
   //   };
   // }, []);
-  const TopProduct = "max-[684px]:[&_.DateRecent]:hidden";
 
   return (
-    <div className="DashTable flex gap30 ">
+    <div className="report-DashTable flex gapping ">
       <div className="card">
-        <Table data={Recenttransaction} Header={"Recent Transactions"} />
+        <Table data={Recenttransaction} headerTrue Header={"Recent Transactions"} />
       </div>
       <div className="card">
-        <Table data={unitSold} Header={"Top Product by unit Sold"} />
+        <Table data={unitSold} headerTrue Header={"Top Product by unit Sold"} />
       </div>
     </div>
   );

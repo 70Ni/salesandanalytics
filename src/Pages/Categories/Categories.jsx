@@ -9,6 +9,7 @@ import VisibiltySection from "./Components/VisibiltySection";
 import CategorySection from "./Components/CategorySection";
 import HeaderSection from "../../Components/Header-Section/HeaderSection";
 import NavBlocker from "../../Components/NavFlat/NavBlocker";
+import Subject from "../../api/Products.json";
 
 function Categories() {
   const HeaderData = [
@@ -35,21 +36,25 @@ function Categories() {
   ];
   const addButton = <AddIcon color={"#1E5EFF"} />;
   return (
-    <div className=" outer-container w-full mx-10 ">
+    <div className=" outer-container">
       <NavBlocker />
       <HeaderSection data={HeaderData} />
-      <div className="Container-inner flex gap-[30px]">
+      <div className="Container-inner Tabletinfo flex gapping">
         <div className="Main-section card basis-9/12">
           <div className="product-adder-card">
-            <div className="header text-paraBold mb-6 text-left">
-              Products{" "}
-              <span className="text-general-80 text-para ml-2"> 12</span>
+            <div className="subHeader2 mb-p24 text-left">
+              Products <span className="para ml-2"> 12</span>
             </div>
-            <div className="product-wrapper flex flex-col gap-3">
-              <ProductEdits />
-              <ProductEdits />
-              <ProductEdits />
-              <ProductEdits />
+            <div className="product-wrapper flex flex-col gap-p12">
+              {Subject.map((item) => {
+                return (
+                  <ProductEdits
+                    thumb={item["product-image"]}
+                    name={item["product-Name"]}
+                  />
+                );
+              })}
+            
             </div>
             <div className="button-wrapper mt-5">
               <WhiteButton text="Add Product" icon={addButton} />
@@ -59,7 +64,7 @@ function Categories() {
           <div className="border border-general-50"></div>
         </div> */}
         </div>
-        <div className="Side-section flex flex-col  basis-3/12 gap-[30px]">
+        <div className="Side-section flex flex-col category-tag-wrapper  basis-3/12 gapping">
           <VisibiltySection />
           <CategorySection />
         </div>

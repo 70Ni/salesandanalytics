@@ -31,13 +31,13 @@ function CategorieSection() {
       ],
     },
   ];
-  
+
   return (
-    <div className=" outer-container w-full mx-10">
+    <div className=" outer-container">
       <NavBlocker />
       <HeaderSection data={HeaderData} />
       <div className="Container-inner flex">
-        <div className="categories-wrapper flex flex-wrap gap30 mb-10">
+        <div className="categories-wrapper flex flex-wrap gapping mb-4">
           {categories.map((item) => {
             return <CategoriesCard data={item} />;
           })}
@@ -49,7 +49,7 @@ function CategorieSection() {
                 className=" w-full max-w-96  object-cover"
               />
             </div>
-            <div className="text-section py-5 px-7">
+            <div className="text-section p-p20 px-7">
               <div className="category-name text-paraBold text-general-100">
                 Item name
               </div>
@@ -59,7 +59,7 @@ function CategorieSection() {
             </div>
           </div> */}
         </div>
-        {/* <div className="Side-section flex flex-col  basis-3/12 gap-[30px]"></div> */}
+        {/* <div className="Side-section flex flex-col  basis-3/12 gapping"></div> */}
       </div>
     </div>
   );

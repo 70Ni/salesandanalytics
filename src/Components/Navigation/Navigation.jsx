@@ -15,7 +15,7 @@ const iconPassive = "#5A607F";
 const activeColor = "text-white";
 const hover = "hover:bg-general-40";
 
-function Navigation({ item, link, icon, open }) {
+function Navigation({ item, link, icon, open, mobNavClose }) {
   let Icon = icon;
   const location = useLocation();
   const [Active, setActive] = useState("");
@@ -24,6 +24,7 @@ function Navigation({ item, link, icon, open }) {
     // console.log(location);
     return setActive(location.pathname);
   };
+
 
   useEffect(() => {
     setLinkActive(location);
@@ -40,7 +41,8 @@ function Navigation({ item, link, icon, open }) {
     <Link to={link}>
       <div
         key={location.key}
-        className={`NavItem p-3 py-[10px] flex items-center justify-between ${
+        onClick={mobNavClose}
+        className={`NavItem p-p12 py-[10px] flex items-center justify-between ${
           link === location.pathname && ActivebgColor
         } rounded cursor-pointer ${link !== location.pathname ? hover : ""} `}
       >

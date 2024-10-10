@@ -56,14 +56,14 @@ function NavTab() {
     //     <input
     //       type="file"
     //       class="block w-full text-sm text-slate-500
-    //   file:mr-4 file:py-2 file:px-4
+    //   file:mr-4 file:py-2 file:px-p16
     //   file:rounded-full file:border-0
     //   file:text-sm file:font-semibold
     //   file:bg-violet-50 file:text-violet-700
     //   hover:file:bg-violet-100
 
     //   block w-full text-para text-general-500
-    //    file:py-2 file:px-6
+    //    file:py-2 file:px-p24
     //   file:rounded file:border-0 border rounded file:border-general-50
     //   file:text-para file:font-para
     //   file:bg-white file:text-primary-100

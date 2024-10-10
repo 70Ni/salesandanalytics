@@ -1,0 +1,22 @@
+.subHeader {
+  @apply text-Heading6 text-general-100 font-Inter;
+}
+.subHeader2 {
+  @apply text-paraBold text-general-100 font-Inter;
+}
+.subHeader3 {
+  @apply text-para text-general-100 font-Inter;
+}
+
+
+
+/* Paragraphs are 14px Font size */
+.para {
+  @apply text-text2reg text-general-80 font-Inter;
+}
+.paraMed {
+  @apply text-text2med text-general-100 font-Inter;
+}
+.paraBold {
+  @apply text-text2Bold text-general-100 font-Inter;
+}

@@ -3,10 +3,10 @@ import ToggleButton from "../../../Components/ToggleButton/ToggleButton";
 
 function Notification({ header, content }) {
   return (
-    <div className="flex justify-between items-center py-6">
-      <div className="header text-paraBold text-general-100 text-left">
+    <div className="flexbt py-p24">
+      <div className="header subHeader2 text-left">
         {header}
-        <div className="para text-text2reg text-general-80 mt-1 text-left">
+        <div className="para mt-1 text-left">
           {content}
         </div>
       </div>

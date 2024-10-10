@@ -6,7 +6,7 @@ import arrow from "../../Images/Icons/08 Arrows/06 Left.svg";
 import KnowledgeIcon from "../../Images/IconComponents/KnowledgeIcon";
 import OrderIcon from "../../Images/IconComponents/OrderIcon";
 
-const NavigationPanel = ({ mobNavOpen, mobNavClose, mobNavState }) => {
+const NavigationPanel = () => {
   const [open, setopen] = useState(true);
   const [belowTab, setBelowTab] = useState(true);
 
@@ -14,12 +14,12 @@ const NavigationPanel = ({ mobNavOpen, mobNavClose, mobNavState }) => {
     setopen(!open);
   };
 
-  useEffect(() => {
-    if (mobNavState) {
-      setopen(true);
-    }
-    return () => {};
-  }, [mobNavState]);
+  // useEffect(() => {
+  //   if (mobNavState) {
+  //     setopen(true);
+  //   }
+  //   return () => {};
+  // }, [mobNavState]);
 
   // console.log(Icons["main"].map((x) => x.item));
 
@@ -38,48 +38,36 @@ const NavigationPanel = ({ mobNavOpen, mobNavClose, mobNavState }) => {
   //   }
   // }, [window.screen.width]);
 
-  useEffect(() => {
-    const handleResize = () => {
-      console.log(window.innerWidth);
-      setBelowTab({
-        width: window.innerWidth,
-      });
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     console.log(window.innerWidth);
+  //     setBelowTab({
+  //       width: window.innerWidth,
+  //     });
+  //   };
 
-    window.addEventListener("resize", handleResize);
+  //   window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
 
-  console.log(mobNavState && belowTab.width <= 767);
   return (
-    <div
-      className={`Navigation wrapper  ${
-        belowTab.width >= 767
-          ? `sticky`
-          : mobNavState
-          ? `absolute left-1 z-[5]`
-          : `absolute -left-96 z-[5]`
-      }
-      // ${
-        belowTab.width <= 767 && mobNavState
-          ? `left-1 z-[5]`
-          : "absolute -left-96 z-[5]"
-      }
-      
-      h-full`}
-    >
-      <div className="p-p16 pt-20 bg-general-30 border-r z-[4] h-screen">
+    <div className={`Navigation wrapper sticky top-0 h-full max-md:hidden`}>
+      <div className="p-p16 pt-20 bg-white border-r z-[4] h-screen">
         <div
-          className="opener rounded-full p-1 bg-white w-fit absolute -right-3 cursor-pointer max-[767px]:hidden"
+          className="opener rounded-full p-[2px] bg-white border w-fit absolute -right-3 cursor-pointer max-[767px]:hidden"
           onClick={navExpander}
         >
           <img
             src={arrow}
             alt=""
-            className={!open && "rotate-180 ease-in-out duration-700"}
+            className={
+              !open
+                ? "-rotate-180 ease-in-out duration-500"
+                : "rotate-0 ease-in-out duration-500"
+            }
           />
         </div>
         <div className="wrapper mt-4">
@@ -89,7 +77,7 @@ const NavigationPanel = ({ mobNavOpen, mobNavClose, mobNavState }) => {
             }}
           ></div> */}
           <div className="mb-base">
-            <div className="text-text3reg text-general-80  mb-3">Main</div>
+            <div className="text-text3reg text-general-80 ml-1  mb-3">Main</div>
             {Icons.main.map((component, index) => {
               let Component = component.image;
               return (
@@ -98,13 +86,15 @@ const NavigationPanel = ({ mobNavOpen, mobNavClose, mobNavState }) => {
                   item={component.item}
                   link={component.link}
                   open={open}
-                  mobNavClose={mobNavClose}
+                  // mobNavClose={mobNavClose}
                 />
               );
             })}
           </div>
           <div className="mb-base">
-            <div className="text-text3reg text-general-80  mb-3">Other</div>
+            <div className="text-text3reg text-general-80  ml-1 mb-3">
+              Other
+            </div>
             {Icons["Other Information"].map((component, index) => {
               let Component = component.image;
               return (
@@ -113,13 +103,15 @@ const NavigationPanel = ({ mobNavOpen, mobNavClose, mobNavState }) => {
                   item={component.item}
                   link={component.link}
                   open={open}
-                  mobNavClose={mobNavClose}
+                  // mobNavClose={mobNavClose}
                 />
               );
             })}
           </div>
           <div className="mb-base">
-            <div className="text-text3reg text-general-80 mb-3">Settings</div>
+            <div className="text-text3reg text-general-80 ml-1 mb-3">
+              Settings
+            </div>
             {Icons.settings.map((component, index) => {
               let Component = component.image;
               return (
@@ -128,7 +120,7 @@ const NavigationPanel = ({ mobNavOpen, mobNavClose, mobNavState }) => {
                   item={component.item}
                   link={component.link}
                   open={open}
-                  mobNavClose={mobNavClose}
+                  // mobNavClose={mobNavClose}
                 />
               );
             })}

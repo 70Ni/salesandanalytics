@@ -14,7 +14,7 @@ function SearchInput({ title, placeholder, id, name }) {
         name={name}
         placeholder={"Search"}
         className="
-      px-4 py-3 
+      px-p16 p-p12 
       pl-12
       border
       border-general-50

@@ -5,7 +5,7 @@
     "customer": "Tom Anderson",
     "payment-status": "Paid",
     "order-status": "Ready",
-    "price": "49.90"
+    "price": "$49.90"
   },
   {
     "Order-Id": "#12523C",
@@ -13,7 +13,7 @@
     "customer": "Jayden Walker",
     "payment-status": "Paid",
     "order-status": "Ready",
-    "price": "34.36"
+    "price": "$34.36"
   },
   {
     "Order-Id": "#51232A",
@@ -21,7 +21,7 @@
     "customer": "Inez Kim",
     "payment-status": "Paid",
     "order-status": "Ready",
-    "price": "5.51"
+    "price": "$5.51"
   },
   {
     "Order-Id": "#23534D",
@@ -29,7 +29,7 @@
     "customer": "Francisco Henry",
     "payment-status": "Paid",
     "order-status": "Shipped",
-    "price": "29.74"
+    "price": "$29.74"
   },
   {
     "Order-Id": "#51323C",
@@ -37,7 +37,7 @@
     "customer": "Violet Phillips",
     "payment-status": "Paid",
     "order-status": "Shipped",
-    "price": "23.06"
+    "price": "$23.06"
   },
   {
     "Order-Id": "#35622A",
@@ -45,7 +45,7 @@
     "customer": "Rosetta Becker",
     "payment-status": "Paid",
     "order-status": "Shipped",
-    "price": "87.44"
+    "price": "$87.44"
   },
   {
     "Order-Id": "#34232D",
@@ -53,7 +53,7 @@
     "customer": "Dean Love",
     "payment-status": "Paid",
     "order-status": "Ready",
-    "price": "44.55"
+    "price": "$44.55"
   },
   {
     "Order-Id": "#56212D",
@@ -61,7 +61,7 @@
     "customer": "Nettie Tyler",
     "payment-status": "Paid",
     "order-status": "Ready",
-    "price": "36.79"
+    "price": "$36.79"
   },
   {
     "Order-Id": "#76543E",
@@ -69,7 +69,7 @@
     "customer": "Lora Weaver",
     "payment-status": "Paid",
     "order-status": "Shipped",
-    "price": "28.78"
+    "price": "$28.78"
   },
   {
     "Order-Id": "#12512B",
@@ -77,7 +77,7 @@
     "customer": "Vincent Cannon",
     "payment-status": "Paid",
     "order-status": "Shipped",
-    "price": "96.46"
+    "price": "$96.46"
   },
   {
     "Order-Id": "#12523C",
@@ -85,7 +85,7 @@
     "customer": "Nettie Palmer",
     "payment-status": "Paid",
     "order-status": "Received",
-    "price": "25.53"
+    "price": "$25.53"
   },
   {
     "Order-Id": "#23534D",
@@ -93,7 +93,7 @@
     "customer": "Miguel Harris",
     "payment-status": "Pending",
     "order-status": "Ready",
-    "price": "50.54"
+    "price": "$50.54"
   },
   {
     "Order-Id": "#12523C",
@@ -101,7 +101,7 @@
     "customer": "Angel Conner",
     "payment-status": "Pending",
     "order-status": "Ready",
-    "price": "63.47"
+    "price": "$63.47"
   },
   {
     "Order-Id": "#51232A",
@@ -109,6 +109,6 @@
     "customer": "Rosalie Singleton",
     "payment-status": "Pending",
     "order-status": "Received",
-    "price": "91.63"
+    "price": "$91.63"
   }
 ]

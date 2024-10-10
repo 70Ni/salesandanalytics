@@ -93,7 +93,6 @@ function Customers({}) {
   //   console.log("from asyc");
   // }
   // getData();
-  if (searchState) {
     searchKeys = Object.assign(searchState);
 
     filteredKeys = searchKeys.filter((key) =>
@@ -103,11 +102,11 @@ function Customers({}) {
       // console.log(key["user-name"].toLowerCase())
       // key.toLowerCase().includes(searchTerm.toLowerCase()) ||
       // fromEuro[key]?.toString().toLowerCase().includes(searchTerm.toLowerCase())
-      key["user-name"]
+      key["user-name"] 
         ?.toLowerCase()
         .includes(searchTerm.action.payload ? searchTerm.action.payload : "")
     );
-  }
+  
   // if (searchState) {
   //   searchKeys = Object.assign(searchState && searchState.state[Section]);
 

@@ -5,7 +5,7 @@ import Tags from "../../Components/Tags/Tags";
 function TagSection({ taglist }) {
   return (
     <div className="Category-Card border p-7 border-general-50 rounded-md w-full bg-white">
-      <div className="header text-paraBold text-general-100 mb-6 text-left">
+      <div className="header text-paraBold text-general-100 mb-p24 text-left">
         Tags
       </div>
 

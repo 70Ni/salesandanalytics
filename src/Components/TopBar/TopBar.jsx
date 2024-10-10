@@ -9,18 +9,21 @@ import Badge from "../Navigation/Badge";
 import Notify from "../../Pages/Inbox/Components/Notify/Notify";
 import dropdownIcon from "../../Images/Icons/08 Arrows/08 Down.svg";
 import SearchIcon from "../../Images/IconComponents/SearchIcon";
+import Hamburger from "../../Images/Icons/02 Common/19 Menu.svg";
 import FooterAction from "../FooterSave/FooterAction";
 
-function TopBar() {
+function TopBar({ action }) {
   return (
-    <div className="flex fixed top-0 right-0 z-10 items-center w-full justify-between md:px-9 px-3 py-4 bg-white h-fit border border-b shadow-sm">
+    <div className="flex fixed top-0 right-0 z-50 items-center w-full justify-between md:px-9 p-p12 px-p16 bg-white h-fit border border-b shadow-sm">
       {/* logo-search section */}
-      <div className="logo-search flex items-center max-w-[800px]">
-        <div className="logo flex">
-          <div className="logo h-10 w-10  mr-2">
-            <img src={logo} alt="logo" className="h-10 w-10" />
+      <div className="logo-search flex items-center ">
+        <div className="logo h-10 w-10  mr-2 md:hidden cursor-pointer">
+          <img src={Hamburger} alt="logo" className="" onClick={action} />
+        </div>
+        <div className="logo flex items-center">
+          <div className="logo h-10 w-10  mr-2 max-[400px]:h-8 max-[400px]:w-8">
+            <img src={logo} alt="logo" className="" />
           </div>
-
           <img
             className="logoname max-md:hidden"
             src={logoName}
@@ -33,13 +36,13 @@ function TopBar() {
       </div>
       {/* icon Section - chat and notification  */}
       <div className="action-section flex items-center ">
-        <div className="chat-notification-wrapper flex cursor-pointer gap-5 mr-9 max-[692px]:mr-4">
-          <div className="chat-wrapper relative">
-            <ChatIcon color={"#7E84A3"} />
-            <div className="badge absolute -top-2 -right-1">
-              <Notify value="5" />
-            </div>
-          </div>
+        <div className="chat-notification-wrapper flex cursor-pointer gap-p20 mr-9 max-[692px]:mr-4">
+          {/* <div className="chat-wrapper relative">
+              <ChatIcon color={"#7E84A3"} />
+              <div className="badge absolute -top-2 -right-1">
+                <Notify value="5" />
+              </div>
+            </div> */}
           <div className="chat-wrapper relative">
             <BellIcon color={"#7E84A3"} />
             <div className="badge absolute -top-2 -right-0">
@@ -69,6 +72,25 @@ function TopBar() {
             alt=""
             className="ml-5 cursor-pointer max-[692px]:ml-2"
           />
+          <div className="dropdown absolute">
+            <div className="wrapper absolute top-8 right-0 w-full">
+              <div className="drop-down-wrapper cursor-pointer flex flex-col border w-full rounded shadow z-10 bg-white shadow-lg">
+                {["Profile","Logout"].map((items) => {
+                  return (
+                    <div
+                      onClick={() => {
+                        // return setselect(items), setOpen(false);
+                      }}
+                      className="drop-item   px-p16 py-2 hover:bg-primary-30 rounded text-general-70 hover:text-general-90"
+                    >
+                      {items}
+                    </div>
+                  );
+                })}
+               
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

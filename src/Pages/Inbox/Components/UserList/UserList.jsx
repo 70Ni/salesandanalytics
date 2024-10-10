@@ -7,10 +7,10 @@ function UserList() {
   return (
     <div className="p-7">
       <div className="header-section">
-        <div className="Header text-paraBold px-7 mb-5 text-general-100 text-left">
+        <div className="Header text-paraBold px-7 mb-p20 text-general-100 text-left">
           Conversations
         </div>
-        <div className="searchwrapper px-7 mb-6">
+        <div className="searchwrapper px-7 mb-p24">
           <SearchInput />
         </div>
       </div>

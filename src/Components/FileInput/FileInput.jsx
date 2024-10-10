@@ -11,7 +11,7 @@ function FileInput({header}) {
         for="dropzone-file"
         class="flex flex-col items-center justify-center w-full border border-general-60 border-dashed rounded cursor-pointer "
       >
-        <div class="flex flex-col items-center justify-center py-7 px-2">
+        <div class="flex flex-col items-center justify-center py-7 p-p20">
           <WhiteButton text="Add file " />
           <p class="para text-center mt-3">
             Or drag and drop files

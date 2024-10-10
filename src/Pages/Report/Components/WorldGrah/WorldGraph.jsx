@@ -46,17 +46,19 @@ const data = [
   // ... more regions
 ];
 
+const windowWidth = window.innerWidth ;
+console.log(windowWidth);
 function WorldGraph() {
   const [TooltipContent, setTooltipContent] = useState("Hover over a country");
   return (
     <div className="outer-wrapper card basis-9/12">
-      <CardHeader Header="Sales Goal" />
-      <div className="data-wrapper flex items-start justify-between">
+      <CardHeader Header="Customer-Demographics" />
+      <div className="data-wrapper flexbt items-start max-[1080px]:flex-col">
         <GraphDetails />
-        <div className="map-list w-[590px] relative border">
+        <div className="map-list relative border rounded basis-5/6">
           <GraphIndicators TooltipContent={TooltipContent} />
 
-          <ComposableMap>
+          <ComposableMap height={windowWidth >= 608 ? 390 : 800}>
             <ZoomableGroup>
               <WorldChart data={{ setTooltipContent }} />
             </ZoomableGroup>

@@ -1,6 +1,6 @@
 import React from "react";
 import Input from "../../../Components/Input/Medium/Input";
-import InputFlex from "../../Customers/Components/InputFlex";
+import InputFlex from "../../../Layouts/InputFlex/InputFlex";
 import CouponCard from "../../../Components/CouponCard/CouponCard";
 import CheckBox from "../../../Components/Others/CheckBox";
 

@@ -5,7 +5,7 @@ import shirt2 from "../../../../../Images/Shits/shirt2.jpg";
 function Image() {
   return (
     <div className="image-wrapper flex flex-col items-end justify-start mr-3">
-      <div className="flex gap-3">
+      <div className="flex gap-p12">
         <img src={shirt} alt="" className="image h-24 w-24 rounded-[4px]" />
         <img src={shirt2} alt="" className="image h-24 w-24 rounded-[4px]" />
       </div>

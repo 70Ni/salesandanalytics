@@ -53,8 +53,8 @@ function CustomerInfo() {
     <div className="outer-container w-full mx-10">
       <NavBlocker />
       <HeaderSection data={HeaderData} />
-      <div className="Container-inner w-full flex gap-[30px]">
-        <div className="Main-section flex flex-col w-full basis-9/12">
+      <div className="Container-inner Tabletinfo-reverse w-full flex gapping">
+        <div className="Main-section  flex flex-col w-full basis-9/12">
           <div className="customer-section border border-general-50 rounded-md p-7  bg-white">
             <Cusomer />
             {/* https://www.geeksforgeeks.org/star-rating-using-html-css-and-javascript/ */}
@@ -66,7 +66,7 @@ function CustomerInfo() {
           <CustomerOrders data={filteredOrders} />
         </div>
 
-        <div className="Side-section flex flex-col  basis-3/12 gap-[30px]">
+        <div className="Side-section flex flex-col  basis-3/12 gapping">
           <OverviewSection />
           <TagSection taglist={["Vip Customer", "Europe"]} />
         </div>

@@ -4,100 +4,100 @@ import { Bar, Line } from "react-chartjs-2";
 import "./styles.css";
 import data from "../../api/OrdersOvertime.json";
 
-const CHARTOPTIONS = {
-  maintainAspectRatio: false,
-  responsive: true,
-  layout: {},
+  const CHARTOPTIONS = {
+    maintainAspectRatio: false,
+    responsive: true,
+    layout: {},
 
-  borderJoinStyle: "round",
-  borderWidth: 4,
-  pointRadius: 0.5,
-  pointHoverRadius: 7,
-  pointHoverBorderWidth: 4,
-  pointHoverBorderColor: "#1E5EFF",
-  pointHoverBackgroundColor: "#ffffff",
-  //   borderColor:colors.general[1],
-  borderColor: "#1E5EFF",
-  plugins: {
-    tooltip: {
-      //   callbacks: {
-      //     afterTitle: "Hello there",
-      //   },
-      titleColor: "#fff",
-      titleAlign: "center",
-      bodyAlign: "center",
-      //   bodyFont: 14,
-    },
-    legend: {
-      display: false,
-      labels: {
-        // This more specific font property overrides the global property
-        font: {
-          size: 24,
-          weight: "bold",
-        },
+    borderJoinStyle: "round",
+    borderWidth: 4,
+    pointRadius: 0.5,
+    pointHoverRadius: 7,
+    pointHoverBorderWidth: 4,
+    pointHoverBorderColor: "#1E5EFF",
+    pointHoverBackgroundColor: "#ffffff",
+    //   borderColor:colors.general[1],
+    borderColor: "#1E5EFF",
+    plugins: {
+      tooltip: {
+        //   callbacks: {
+        //     afterTitle: "Hello there",
+        //   },
+        titleColor: "#fff",
+        titleAlign: "center",
+        bodyAlign: "center",
+        //   bodyFont: 14,
       },
-    },
-  },
-
-  // Modify the axis by adding scales
-  scales: {
-    // to remove the labels
-    x: {
-      ticks: {
-        display: true,
-        color: "#A1A7C4",
-      },
-
-      // to remove the x-axis grid
-      grid: {
-        borderWidth: 0,
-        drawOnChartArea: false,
-        drawBorder: false,
+      legend: {
         display: false,
-      },
-    },
-    y: {
-      border: { dash: [2, 4] }, // for the grid lines
-      borderWidth: 1,
-      ticks: {
-        stepSize: 10,
-        padding: 14,
-        autoSkip: false,
-        color: "#A1A7C4",
-        font: {
-          size: 12,
-          weight: "Normal",
+        labels: {
+          // This more specific font property overrides the global property
+          font: {
+            size: 24,
+            weight: "bold",
+          },
         },
       },
-      grid: {
-        borderWidth: 0,
-        color: "#E6E9F4", // for the grid lines
-        // tickColor: '#000', // for the tick mark
-        // tickBorderDash: [2, 3], // also for the tick, if long enough
-        // tickLength: 10, // just to see the dotted line
-        // tickWidth: 2,
-        // offset: true,
-        // drawTicks: true, // true is default
-        // drawOnChartArea: true // true is default
-      },
-
-      beginAtZero: true,
     },
-    // to remove the y-axis labels
-    //   y: {
-    //     ticks: {
-    //       display: false,
-    //       beginAtZero: true,
-    //     },
-    //     // to remove the y-axis grid
-    //     grid: {
-    //       drawBorder: false,
-    //       display: false,
-    //     },
-    //   },
-  },
-};
+
+    // Modify the axis by adding scales
+    scales: {
+      // to remove the labels
+      x: {
+        ticks: {
+          display: true,
+          color: "#A1A7C4",
+        },
+
+        // to remove the x-axis grid
+        grid: {
+          borderWidth: 0,
+          drawOnChartArea: false,
+          drawBorder: false,
+          display: false,
+        },
+      },
+      y: {
+        border: { dash: [2, 4] }, // for the grid lines
+        borderWidth: 1,
+        ticks: {
+          stepSize: 10,
+          padding: 14,
+          autoSkip: false,
+          color: "#A1A7C4",
+          font: {
+            size: 12,
+            weight: "Normal",
+          },
+        },
+        grid: {
+          borderWidth: 0,
+          color: "#E6E9F4", // for the grid lines
+          // tickColor: '#000', // for the tick mark
+          // tickBorderDash: [2, 3], // also for the tick, if long enough
+          // tickLength: 10, // just to see the dotted line
+          // tickWidth: 2,
+          // offset: true,
+          // drawTicks: true, // true is default
+          // drawOnChartArea: true // true is default
+        },
+
+        beginAtZero: true,
+      },
+      // to remove the y-axis labels
+      //   y: {
+      //     ticks: {
+      //       display: false,
+      //       beginAtZero: true,
+      //     },
+      //     // to remove the y-axis grid
+      //     grid: {
+      //       drawBorder: false,
+      //       display: false,
+      //     },
+      //   },
+    },
+  };
 
 let array = [];
 const arr = data.map((x) => {

@@ -3,15 +3,15 @@ import ProductImage from "./Images/48x48/ProductImage";
 import CouponImg from "./Images/48x48/CouponImg";
 import Avatar from "./Images/48x48/Avatar";
 
-function TDImage({ ItemName, Name, subTxt, ProductImg, category }) {
+function TDImage({ ItemName, Name, subTxt, ProductImg, category,classn }) {
   return (
-    <div className="flex items-center py-3 px-2">
-      {ProductImg ? <ProductImage ProductImg={ProductImg} /> : null}
-      {category ? <CouponImg category={category} /> : null}
-      {Name ? <Avatar Name={Name} /> : null}
-      <div className="wrapper ml-4">
-        <div className="text-text2med text-general-100">{ItemName}</div>
-        <div className="text-text2reg text-general-80">{subTxt}</div>
+    <div className="flex items-center p-p12 px-2">
+      {ProductImg ? <ProductImage classn={classn} ProductImg={ProductImg} /> : null}
+      {category ? <CouponImg classn={classn} category={category} /> : null}
+      {Name ? <Avatar classn={classn} Name={Name} /> : null}
+      <div className={`${classn + "wrapper"} wrapper `}>
+        <div className="paraBold">{ItemName}</div>
+        <div className="para">{subTxt}</div>
       </div>
     </div>
   );

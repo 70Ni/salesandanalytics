@@ -5,7 +5,7 @@ import ProductSection from "../Products/Components/ProductSection";
 import Input from "../../Components/Input/Medium/Input";
 import TextInput from "../../Components/Input/Large/TextInput";
 import PrimaryButton from "../../Components/Buttons/PrimaryButton";
-import InputFlex from "../Customers/Components/InputFlex";
+import InputFlex from "../../Layouts/InputFlex/InputFlex";
 import ProfileDetails from "./Components/ProfileDetails";
 import RegionalSetting from "./Components/RegionalSetting";
 import NotificationSection from "./SettingsLayouts/NotificationSection";
@@ -50,13 +50,13 @@ function SettingsPage() {
       return setSection(e);
     }
   };
-  console.log(Section);
+
   return (
-    <div className=" outer-container w-full mx-10">
+    <div className="outer-container">
       <NavBlocker />
       <HeaderSection data={HeaderData} />
-      <div className="Container-inner flex gap-[30px]">
-        <div className="Main-section border bg-white border-general-50 rounded-md p-7 w-full">
+      <div className="Container-inner flex gapping">
+        <div className="Main-section card">
           <SectionNav Sections={Sections} action={getNavSection} />
           <div className="section-viewer">
             {Section === "Profile" && <ProfileLayout />}
@@ -67,7 +67,7 @@ function SettingsPage() {
 
           {/* Notification section from below */}
         </div>
-        {/* <div className="Side-section flex flex-col  basis-3/12 gap-[30px]">
+        {/* <div className="Side-section flex flex-col  basis-3/12 gapping">
           <CategorySection />
           <TagSection
             taglist={["T-Shirt", "Men Clothes", "Summer Collection"]}

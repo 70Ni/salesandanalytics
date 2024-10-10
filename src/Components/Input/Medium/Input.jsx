@@ -12,7 +12,7 @@ function Input({ title, placeholder, id, name }) {
         name={name}
         placeholder={placeholder}
         className="
-        px-4 py-2 
+        px-p16 py-2 
         border-[1px] 
         border-general-50
         text-general-60

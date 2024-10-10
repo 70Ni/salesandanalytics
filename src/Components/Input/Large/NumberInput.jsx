@@ -30,7 +30,7 @@ function NumberInput({ title, id, name }) {
         placeholder={Count}
         className="
         text-center
-      px-4 py-3 
+      px-p16 p-p12 
       pl-12
       border-2 
       border-general-50

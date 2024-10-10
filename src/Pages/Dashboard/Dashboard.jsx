@@ -28,12 +28,12 @@ function Dashboard() {
     },
   ];
   return (
-    <div className="outer-container w-full mx-10 mb-10">
+    <div className="outer-container mb-10">
       <NavBlocker />
       <HeaderSection data={HeaderData} />
-      <div className="Page-Section flex flex-col gap30">
+      <div className="Page-Section flex flex-col gapping">
         <SumSection />
-        <div className="Graph-wrapper-dashboard flex gap30 horizonal-gap">
+        <div className="Graph-wrapper-dashboard flex gapping">
           <OrdersTime />
           <LastSale />
         </div>

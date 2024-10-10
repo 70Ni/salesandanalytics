@@ -1,13 +1,13 @@
 import React from "react";
-import InputFlex from "../../Customers/Components/InputFlex";
+import InputFlex from "../../../Layouts/InputFlex/InputFlex";
 import FileInput from "../../../Components/FileInput/FileInput";
 
 function ProfileDetails() {
   return (
-    <div className="flex flex-col gap-6">
-      <div className="header text-paraBold text-general-100 text-left">
+    <div className="flex flex-col gap-p24">
+      <div className="header subHeader2 text-left">
         Profile Details
-        <div className="para text-text2reg text-general-80 mb-2 text-left">
+        <div className="para mb-2 text-left">
           Enter your profile information{" "}
         </div>
       </div>

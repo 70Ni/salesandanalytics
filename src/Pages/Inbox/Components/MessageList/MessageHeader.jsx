@@ -16,7 +16,7 @@ function MessageHeader() {
             <Status />
           </div>
         </div>
-        <div className="action-section flex gap-5">
+        <div className="action-section flex gap-p20">
           <img src={user} alt="" />
           <img src={video} alt="" />
           <img src={settings} alt="" />
