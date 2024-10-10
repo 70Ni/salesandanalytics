@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import HeaderSection from "../../Components/Header-Section/HeaderSection";
 import Table from "../../Components/Table/TableFile";
 import customerdata from "../../api/Customers.json";
+import fromEuro from "../../api/fromEurop.json";
+import returning from "../../api/reuturingCutomers.json";
 import AddIcon from "../../Images/IconComponents/AddIcon";
 import { Link } from "react-router-dom";
 import { type } from "@testing-library/user-event/dist/type";
@@ -15,6 +17,7 @@ import TableAction from "../../Layouts/TableActions/TableAction";
 import SectionNav from "../../Components/Navigation/SectionNav/SectionNav";
 import FileInput from "../../Components/FileInput/FileInput";
 import NavBlocker from "../../Components/NavFlat/NavBlocker";
+import { useSelector, useDispatch } from "react-redux";
 
 const HeaderData = [
   { header: "Customers" },
@@ -40,10 +43,6 @@ const HeaderData = [
   },
 ];
 
-const action = () => {
-  return console.log("Hello");
-};
-
 const Sections = [
   "All Customers",
   "New Customers",
@@ -52,16 +51,96 @@ const Sections = [
 ];
 
 function Customers({}) {
+  const [Section, setSection] = useState("All Customers");
+
+  const getNavSection = (e) => {
+    console.log(e);
+    if (e) {
+      return setSection(e);
+    }
+  };
+
+  const searchTerm = useSelector((state) => state);
+  console.log(searchTerm.searchdata);
+
+  const searchState = useSelector((state) => state);
+  // console.log(searchTerm.searchdata);
+
+  let searchKeys;
+  switch (Section) {
+    case Section === "All Customers":
+      value = all;
+      break;
+    case Section === "New Customers":
+      value = Object.assign(fromEuro);
+      break;
+    case Section === "Returning Customers":
+      value = Object.assign(returning);
+      break;
+    case Section === "From Europe":
+      value = Object.assign(fromEuro);
+      break;
+
+    default:
+      value = Object.assign(customerdata);
+  }
+
+  searchKeys = Object.assign(searchState[])
+  const filteredKeys = searchKeys.filter((key) =>
+    // console.log(fromEuro[key]["user-name"])
+    // console.log(key["user-name"] || key["location"])
+
+    // console.log(key["user-name"].toLowerCase())
+    // key.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    // fromEuro[key]?.toString().toLowerCase().includes(searchTerm.toLowerCase())
+    key["user-name"]
+      ?.toLowerCase()
+      .includes(
+        searchTerm.searchdata.length > 0 && searchTerm.searchdata.toLowerCase()
+      )
+  );
+
   return (
-    <div className="outer-container w-full mx-10">
+    <div className="outer-container">
       <NavBlocker />
       <HeaderSection data={HeaderData} />
-      <div className="Container-inner w-full flex gap30">
-        <div className="Main-section flex flex-co w-full">
-          <div className="table-section  card">
-            <SectionNav Sections={Sections} />
+      <div className="Container-inner w-full flex gapping">
+        <div className="Main-section flex flex-col w-full">
+          <div className="table-section card mb-4">
+            <SectionNav Sections={Sections} action={getNavSection} />
             <TableAction />
-            <Table data={customerdata} action={action} />
+
+            {/* {Section === "New Customers" && <Table data={fromEuro} />} */}
+            {/* {Section === "All Customers" && <Table data={searchDatas} />} */}
+            {Section === "All Customers" && (
+              <Table
+                data={
+                  searchTerm.searchdata.length > 0 ? filteredKeys : customerdata
+                }
+              />
+            )}
+            {Section === "From Europe" && (
+              <Table
+                data={
+                  searchTerm.searchdata.length > 0 ? filteredKeys : fromEuro
+                }
+              />
+            )}
+            {Section === "New Customers" && (
+              <Table
+                data={
+                  searchTerm.searchdata.length > 0 ? filteredKeys : fromEuro
+                }
+              />
+            )}
+            {Section === "Returning Customers" && (
+              <Table
+                data={
+                  searchTerm.searchdata.length > 0 ? filteredKeys : returning
+                }
+              />
+            )}
+            {/* {Section === "Returning Customers" && <Table data={returning} />} */}
             {/* <FileInput /> */}
           </div>
         </div>
