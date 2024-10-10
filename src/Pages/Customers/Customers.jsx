@@ -60,45 +60,67 @@ function Customers({}) {
     }
   };
 
-  const searchTerm = useSelector((state) => state);
-  console.log(searchTerm.searchdata);
+  const searchTerm = useSelector((state) => state.searchdata);
+  // console.log(searchTerm.searchdata.action.payload);
 
-  const searchState = useSelector((state) => state);
-  // console.log(searchTerm.searchdata);
+  const searchState = useSelector((state) => state.searchdata.state[Section]);
+  console.log(searchState);
+  const [locatState, setlocatState] = useState({});
 
+  // console.log(searchState);
+  // let searchKeys;
+  // switch (Section) {
+  //   case Section === "All Customers":
+  //     value = all;
+  //     break;
+  //   case Section === "New Customers":
+  //     value = Object.assign(fromEuro);
+  //     break;
+  //   case Section === "Returning Customers":
+  //     value = Object.assign(returning);
+  //     break;
+  //   case Section === "From Europe":
+  //     value = Object.assign(fromEuro);
+  //     break;
+
+  //   default:
+  //     value = Object.assign(customerdata);
+  // }
   let searchKeys;
-  switch (Section) {
-    case Section === "All Customers":
-      value = all;
-      break;
-    case Section === "New Customers":
-      value = Object.assign(fromEuro);
-      break;
-    case Section === "Returning Customers":
-      value = Object.assign(returning);
-      break;
-    case Section === "From Europe":
-      value = Object.assign(fromEuro);
-      break;
+  let filteredKeys;
 
-    default:
-      value = Object.assign(customerdata);
+  // async function getData(searchState) {
+  //   console.log("from asyc");
+  // }
+  // getData();
+  if (searchState) {
+    searchKeys = Object.assign(searchState);
+
+    filteredKeys = searchKeys.filter((key) =>
+      // console.log(fromEuro[key]["user-name"])
+      // console.log(key["user-name"] || key["location"])
+
+      // console.log(key["user-name"].toLowerCase())
+      // key.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      // fromEuro[key]?.toString().toLowerCase().includes(searchTerm.toLowerCase())
+      key["user-name"]
+        ?.toLowerCase()
+        .includes(searchTerm.action.payload ? searchTerm.action.payload : "")
+    );
   }
+  // if (searchState) {
+  //   searchKeys = Object.assign(searchState && searchState.state[Section]);
 
-  searchKeys = Object.assign(searchState[])
-  const filteredKeys = searchKeys.filter((key) =>
-    // console.log(fromEuro[key]["user-name"])
-    // console.log(key["user-name"] || key["location"])
+  //   filteredKeys = searchKeys.filter((key) =>
+  //     // console.log(fromEuro[key]["user-name"])
+  //     // console.log(key["user-name"] || key["location"])
 
-    // console.log(key["user-name"].toLowerCase())
-    // key.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    // fromEuro[key]?.toString().toLowerCase().includes(searchTerm.toLowerCase())
-    key["user-name"]
-      ?.toLowerCase()
-      .includes(
-        searchTerm.searchdata.length > 0 && searchTerm.searchdata.toLowerCase()
-      )
-  );
+  //     // console.log(key["user-name"].toLowerCase())
+  //     // key.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  //     // fromEuro[key]?.toString().toLowerCase().includes(searchTerm.toLowerCase())
+  //     key["user-name"]?.toLowerCase().includes("j")
+  //   );
+  // }
 
   return (
     <div className="outer-container">
@@ -112,14 +134,11 @@ function Customers({}) {
 
             {/* {Section === "New Customers" && <Table data={fromEuro} />} */}
             {/* {Section === "All Customers" && <Table data={searchDatas} />} */}
-            {Section === "All Customers" && (
-              <Table
-                data={
-                  searchTerm.searchdata.length > 0 ? filteredKeys : customerdata
-                }
-              />
-            )}
-            {Section === "From Europe" && (
+            {Section === "All Customers" && <Table data={filteredKeys} />}
+            {Section === "New Customers" && <Table data={filteredKeys} />}
+            {Section === "Returning Customers" && <Table data={filteredKeys} />}
+            {Section === "From Europe" && <Table data={filteredKeys} />}
+            {/* {Section === "From Europe" && (
               <Table
                 data={
                   searchTerm.searchdata.length > 0 ? filteredKeys : fromEuro
@@ -139,7 +158,7 @@ function Customers({}) {
                   searchTerm.searchdata.length > 0 ? filteredKeys : returning
                 }
               />
-            )}
+            )} */}
             {/* {Section === "Returning Customers" && <Table data={returning} />} */}
             {/* <FileInput /> */}
           </div>
