@@ -57,11 +57,13 @@ function TopBar({ action }) {
         <div className="profile-action-wrapper flex items-center">
           <div className="profile-section flex items-center">
             <div className="avatar-wrapper h-9 w-9">
-              <img
-                src={Avatar}
-                alt="profile"
-                className="h-9 w-9 cursor-pointer"
-              />
+              <a href="/personal-settings">
+                <img
+                  src={Avatar}
+                  alt="profile"
+                  className="h-9 w-9 cursor-pointer"
+                />
+              </a>
             </div>
             <div className="text-text2reg text-general-80  text-skin-base  ml-3 max-[692px]:hidden">
               X’eriya Ponald
