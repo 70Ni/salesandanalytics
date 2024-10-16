@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import arrow from "../../Images/Icons/08 Arrows/08 Down.svg";
 import clear from "../../Images/Icons/01 Actions/08 Close.svg";
+import { useDispatch } from "react-redux";
 
 function Select({ options, title, placeholder }) {
-  console.log(options,placeholder)
+  console.log(options, placeholder);
   const [select, setselect] = useState("");
   const [open, setOpen] = useState(false);
-
+  const dispatch = useDispatch();
   return (
     <div className="relative w-full min-w-[150px]">
       {title && (
@@ -15,7 +16,9 @@ function Select({ options, title, placeholder }) {
         </label>
       )}
       <div
-        onClick={() => setOpen(!open)}
+        onClick={() => {
+          return setOpen(!open);
+        }}
         className="relative w-full cursor-pointer px-p16 py-2 rounded border border-general-50"
       >
         <div className="select w-full flex justify-between items-center">
@@ -38,7 +41,11 @@ function Select({ options, title, placeholder }) {
               return (
                 <div
                   onClick={() => {
-                    return setselect(items), setOpen(false);
+                    return (
+                      setselect(items),
+                      setOpen(false),
+                      dispatch({ type: items })
+                    );
                   }}
                   className="drop-item  px-p16 py-2 hover:bg-primary-30 rounded text-general-70 hover:text-general-90"
                 >
@@ -48,7 +55,9 @@ function Select({ options, title, placeholder }) {
             })}
             <div
               onClick={() => {
-                return setselect(""), setOpen(false);
+                return (
+                  setselect(""), setOpen(false), dispatch({ type: "CLEAR" })
+                );
               }}
               className="clear-wrapper flex items-center bg-white z-20 cursor-pointer  justify-between px-2  hover:bg-primary-30  hover:text-general-90 "
             >

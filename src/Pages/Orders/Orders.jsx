@@ -9,6 +9,7 @@ import HeaderSection from "../../Components/Header-Section/HeaderSection";
 import NavBlocker from "../../Components/NavFlat/NavBlocker";
 import TableAction from "../../Layouts/TableActions/TableAction";
 import AddIcon from "../../Images/IconComponents/AddIcon";
+import { useDispatch, useSelector } from "react-redux";
 
 const HeaderData = [
   { header: "Orders" },
@@ -30,6 +31,8 @@ const HeaderData = [
 ];
 
 function Orders() {
+  const orderState = useSelector((state) => state.orderData);
+  console.log(orderState);
   return (
     <div className="outer-container">
       <NavBlocker />
@@ -38,7 +41,7 @@ function Orders() {
         <div className="order-action-panel mb-4">
           <div className="tabelPadding card pb-p20">
             <TableAction />
-            <Table data={orders} Header={"Orders"} check />
+            <Table data={orderState.Orders} Header={"Orders"} check />
           </div>
         </div>
       </div>

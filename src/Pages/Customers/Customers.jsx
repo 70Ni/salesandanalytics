@@ -86,16 +86,16 @@ function Customers({}) {
   //   default:
   //     value = Object.assign(customerdata);
   // }
-  let searchKeys;
-  let filteredKeys;
+  // let searchKeys;
+  // let filteredKeys;
 
   // async function getData(searchState) {
   //   console.log("from asyc");
   // }
   // getData();
-    searchKeys = Object.assign(searchState);
+    const searchKeys = Object.assign(searchState);
 
-    filteredKeys = searchKeys.filter((key) =>
+    const filteredKeys = searchKeys.filter((key) =>
       // console.log(fromEuro[key]["user-name"])
       // console.log(key["user-name"] || key["location"])
 

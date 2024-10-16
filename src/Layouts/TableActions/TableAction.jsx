@@ -15,7 +15,7 @@ function TableAction() {
           <div className="selector">
             <Select
               placeholder={"filter"}
-              options={["Price", "Last modified"]}
+              options={["Paid", "Pending", "Shipped", "Ready", "Received"]}
             />
           </div>
           <div className="selector max-[478px]:hidden">
