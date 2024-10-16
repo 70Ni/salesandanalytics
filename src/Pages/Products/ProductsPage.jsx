@@ -5,6 +5,7 @@ import Table from "../../Components/Table/TableFile";
 import orders from "../../api/Products.json";
 import AddIcon from "../../Images/IconComponents/AddIcon";
 import TableAction from "../../Layouts/TableActions/TableAction";
+import { useSelector } from "react-redux";
 
 const HeaderData = [
   { header: "Products" },
@@ -30,11 +31,8 @@ const HeaderData = [
 ];
 
 function ProductsPage() {
-  const file = {
-    user: 20,
-  };
-
-  console.log(file["user"]);
+  const productState = useSelector((state) => state.productData.Products);
+  console.log(productState);
 
   return (
     <div className=" outer-container">
@@ -43,8 +41,10 @@ function ProductsPage() {
       <div className="Container-inner">
         <div className="order-action-panel mb-4">
           <div className="card">
-            <TableAction />
-            <Table data={orders} check />
+            <TableAction
+              selectOptions={["T-Shirt", "Hoodies", "Black", "White"]}
+            />
+            <Table data={productState} check />
           </div>
         </div>
       </div>

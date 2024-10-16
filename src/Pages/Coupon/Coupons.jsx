@@ -8,6 +8,7 @@ import TableAction from "../../Layouts/TableActions/TableAction";
 import NavTab from "../Inbox/Components/NavTab/NavTab";
 import FooterAction from "../../Components/FooterSave/FooterAction";
 import SectionNav from "../../Components/Navigation/SectionNav/SectionNav";
+import { useSelector } from "react-redux";
 
 function Coupons() {
   const [Section, setSection] = useState("All Coupons");
@@ -45,6 +46,22 @@ function Coupons() {
     },
   ];
 
+  const couponState = useSelector((state) => state.searchdata);
+  console.log(couponState);
+  const searchKeys = Object.assign(coupons);
+
+  const filteredKeys = searchKeys.filter((key) =>
+    // console.log(fromEuro[key]["user-name"])
+    // console.log(key["user-name"] || key["location"])
+
+    // console.log(key["user-name"].toLowerCase())
+    // key.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    // fromEuro[key]?.toString().toLowerCase().includes(searchTerm.toLowerCase())
+    key["coupon-name"]
+      ?.toLowerCase()
+      .includes(couponState.action.payload ? couponState.action.payload : "")
+  );
+
   return (
     <div className="outer-container">
       <NavBlocker />
@@ -53,15 +70,15 @@ function Coupons() {
         <div className="order-action-panel mb-4">
           <div className="tabelPadding card pb-p20">
             <SectionNav Sections={Sections} action={getNavSection} />
-            <TableAction />
+            <TableAction selectOptions={[""]} />
             <div className="coupon-list-card flex flex-col gapping"></div>
             {/* <Table data={coupons} /> */}
-            {Section === "All Coupons" && <Table data={coupons} />}
+            {Section === "All Coupons" && <Table data={filteredKeys} />}
             {Section === "Active Coupons" && (
-              <Table data={coupons.slice(1, 7)} />
+              <Table data={filteredKeys.slice(1, 7)} />
             )}
             {Section === "Expired Coupons" && (
-              <Table data={coupons.slice(5, 10)} />
+              <Table data={filteredKeys.slice(5, 10)} />
             )}
           </div>
         </div>

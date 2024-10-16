@@ -129,7 +129,7 @@ function Customers({}) {
         <div className="Main-section flex flex-col w-full">
           <div className="table-section card mb-4">
             <SectionNav Sections={Sections} action={getNavSection} />
-            <TableAction />
+            <TableAction selectOptions={[""]} />
 
             {/* {Section === "New Customers" && <Table data={fromEuro} />} */}
             {/* {Section === "All Customers" && <Table data={searchDatas} />} */}

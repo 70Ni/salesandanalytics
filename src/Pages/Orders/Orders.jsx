@@ -40,7 +40,9 @@ function Orders() {
       <div className="Container-inner">
         <div className="order-action-panel mb-4">
           <div className="tabelPadding card pb-p20">
-            <TableAction />
+            <TableAction
+              selectOptions={["Paid", "Ready", "Shipped", "Pending"]}
+            />
             <Table data={orderState.Orders} Header={"Orders"} check />
           </div>
         </div>

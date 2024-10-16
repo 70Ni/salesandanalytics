@@ -7,7 +7,7 @@ const initialState = {
 const orderReducer = (state = initialState, action) => {
   switch (action.type) {
     case "SEARCH":
-      const searchKeys = Object.assign(Orders);
+      const searchKeys = Object.assign(state.Orders);
       const filteredKeys = searchKeys.filter((key) =>
         key.customer.toLowerCase().includes(action.payload.toLowerCase())
       );
@@ -16,14 +16,14 @@ const orderReducer = (state = initialState, action) => {
     case "Shipped":
     case "Ready":
     case "Received":
-      switch (action.type) {
-        case "SEARCH":
-          const searchKeys = Object.assign(Orders);
-          const filteredKeys = searchKeys.filter((key) =>
-            key.customer.toLowerCase().includes(action.payload.toLowerCase())
-          );
-          return { ...state, Orders: filteredKeys, act: action.type };
-      }
+      // switch (action.type) {
+      //   case "SEARCH":
+      //     const searchKeys = Object.assign(state.Orders);
+      //     const filteredKeys = searchKeys.filter((key) =>
+      //       key.customer.toLowerCase().includes(action.payload.toLowerCase())
+      //     );
+      //     return { ...state, Orders: filteredKeys, act: action.type };
+      // }
       const orderStatus = Orders.filter(
         (order) => order["order-status"] === action.type
       );

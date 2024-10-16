@@ -4,7 +4,7 @@ import Select from "../../Components/Select/Select";
 import EditIcon from "../../Images/IconComponents/EditIcon";
 import DeleteIcon from "../../Images/IconComponents/DeleteIcon";
 
-function TableAction() {
+function TableAction({ selectOptions }) {
   return (
     <div className="Table-actions mb-p20 gap-2 w-full">
       <div className="mobile-search w-full mb-3 hidden max-[478px]:block">
@@ -13,10 +13,7 @@ function TableAction() {
       <div className="filter-section flexbt">
         <div className="flexbt gap-p16 mr-4">
           <div className="selector">
-            <Select
-              placeholder={"filter"}
-              options={["Paid", "Pending", "Shipped", "Ready", "Received"]}
-            />
+            <Select placeholder={"filter"} options={selectOptions} />
           </div>
           <div className="selector max-[478px]:hidden">
             <SearchInput />

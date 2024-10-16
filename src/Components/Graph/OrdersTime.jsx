@@ -14,7 +14,7 @@ function OrdersTime() {
           <div className="date-range para">
             <Selection
               placeholder={"Last 7 day"}
-              options={["Last Day","Last 7 days"]}
+              options={["Last 6 Hours","Last 7 days"]}
             />
           </div>
         </div>
