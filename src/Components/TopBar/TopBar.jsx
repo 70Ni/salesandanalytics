@@ -72,7 +72,7 @@ function TopBar({ action }) {
             alt=""
             className="ml-5 cursor-pointer max-[692px]:ml-2"
           />
-          <div className="dropdown absolute">
+          {/* <div className="dropdown absolute">
             <div className="wrapper absolute top-8 right-0 w-full">
               <div className="drop-down-wrapper cursor-pointer flex flex-col border w-full rounded shadow z-10 bg-white shadow-lg">
                 {["Profile","Logout"].map((items) => {
@@ -90,7 +90,7 @@ function TopBar({ action }) {
                
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
